@@ -9,3 +9,9 @@ No lo he probado, porque es de pago, se puede sustituir por otras extensiones, u
 
 Se utiliza para la corrección del código, cuando se abre de nuevo el archivo los errores se corrigen.
 Hice la prueba, pero no me funcionó y no salía ningún tipo de error.
+
+### PHP DocBlocker
+
+Se utiliza para hacer comentarios, no me pareció muy util, puesto que se pueden hacer sin esta extensión
+
+<img width="478" height="70" alt="image" src="https://github.com/user-attachments/assets/5270cf52-f418-40de-a942-9f99ea91317c" />
