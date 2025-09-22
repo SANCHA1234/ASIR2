@@ -1,6 +1,7 @@
 # Parámetros
 
 ## Innod_buffer_pool_size
+  - Es un parámetro que indica la cantidad de ram con la que trabaja la bbdd.
 ## innodb_log_file_size
 ## max_connections
 ## query_cache_size
