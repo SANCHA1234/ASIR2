@@ -1,8 +1,8 @@
 # Parámetros
 
-### Innod_buffer_pool_size
-### innodb_log_file_size
-### max_connections
+## Innod_buffer_pool_size
+## innodb_log_file_size
+## max_connections
 ## query_cache_size
 ## table_open_cache
 ## tmp_table_size
