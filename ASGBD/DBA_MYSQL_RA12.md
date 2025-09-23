@@ -31,3 +31,22 @@ Parámetro que especifica la dirección IP en la que el servidor de base de dato
 Parámetro que controla si el motor InnoDB crea un archivo de datos separado (.ibd) para cada tabla o si almacena todas las tablas en un único archivo de tablas del sistema.
 ## performance_schema
 Parámetro que recopila y almacena datos de bajo nivel sobre el rendimiento interno del servidor de la base de datos.
+
+
+# Entrevistas
+
+## Entrevista 1
+| Parámetro | Valor | Justificación|
+|-----------|-----------|-----------|
+|query_cache_size|65%RAM|Puesto que pide que vaya a tiempo real|
+|max_connections|x0.95|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan, pero evitamos que haya demasiadas consultas a la vez. |
+|innodb_log_file_size|50 %|Utilizando la mitad de dos discos que estén en Raid 1|
+|table_open_cache|ON|Evita que el servidor emplee tiempo en volver a sacar datos ya pedidos.
+|slow query log time|5 Segundos|Tiene que ser el acceso instantáneo|
+|innodb_file_per_table|10 % del disco|Para tener una mejor organización y evitar que el disco se llene de archivos innecesarios.|
+|slow_query_log|ON |Saber que tablas son las más demandadas permite destinar mejor los recursos. |
+|table open cache|5% De RAM |Habilitando un límite de consultas, evitamos que el servidor pueda trabajar por encima de su capacidad.|
+
+## Entrevista 2
+
+## Entrevista 3
