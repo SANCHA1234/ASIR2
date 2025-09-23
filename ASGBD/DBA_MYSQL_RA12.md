@@ -61,6 +61,5 @@ Parámetro que recopila y almacena datos de bajo nivel sobre el rendimiento inte
 |-----------|-----------|-----------|
 |Max connections|0,95 de solicitudes de acceso|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan, pero evitamos que haya demasiadas consultas a la vez.|
 |innodb_flush_log_at_trx_commit|ON|Para controlar el rendimiento del disco frente a la carga de datos en el servidor|
-| innodb_log_file_size|ON|
-DE 5 Bytes, para asegurar que los comentarios en las publicaciones se quedan guardados|
+| innodb_log_file_size|ON|De 5 Bytes, para asegurar que los comentarios en las publicaciones se quedan guardados|
 |query_cache_size|70 % de RAM|Debido a la carga de datos constante y a la interacción de los usuarios|
