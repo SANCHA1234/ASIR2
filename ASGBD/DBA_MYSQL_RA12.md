@@ -48,5 +48,19 @@ Parámetro que recopila y almacena datos de bajo nivel sobre el rendimiento inte
 |table open cache|5% De RAM |Habilitando un límite de consultas, evitamos que el servidor pueda trabajar por encima de su capacidad.|
 
 ## Entrevista 2
-
+| Parámetro | Valor | Justificación|
+|-----------|-----------|-----------|
+|Table_open_cache|70% de Ram|De esta forma el acceso a los artículos será más rápido|
+|max_heap_table_size|100 MB|Al tratarse de grandes volúmenes de datos. Reducimos el número de tablas.|
+|long_query_time|20 segundos|Al tratarse de una búsqueda de datos amplia, va a emplear más tiempo en buscar información|
+|slow_query_log|ON|Poder identificar cuales son los datos que  más tiempo tardan en cargar, permite adecuar los recursos.|
+|slow_query_log file|ON|Si se identifica con rapidez, las rutas más utilizadas, se puede priorizar con respecto a otras|
+|innodb_buffer_pool_size|70 % de Ram|Debido a la gran cantidad de datos que contiene.|
 ## Entrevista 3
+| Parámetro | Valor | Justificación|
+|-----------|-----------|-----------|
+|Max connections|0,95 de solicitudes de acceso|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan, pero evitamos que haya demasiadas consultas a la vez.|
+|innodb_flush_log_at_trx_commit|ON|Para controlar el rendimiento del disco frente a la carga de datos en el servidor|
+| innodb_log_file_size|ON|
+DE 5 Bytes, para asegurar que los comentarios en las publicaciones se quedan guardados|
+|query_cache_size|70 % de RAM|Debido a la carga de datos constante y a la interacción de los usuarios|
