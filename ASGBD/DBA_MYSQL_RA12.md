@@ -65,7 +65,7 @@ Parámetro que recopila y almacena datos de bajo nivel sobre el rendimiento inte
 |query_cache_size|70 % de RAM|Debido a la carga de datos constante y a la interacción de los usuarios|
 
 # Mysql
-##Archivo original
+## Archivo original
 <img width="736" height="692" alt="image" src="https://github.com/user-attachments/assets/0919687f-7f23-496b-9c90-fd7c18c2a2b6" />
 ## Archivo cambiado
 <img width="744" height="592" alt="image" src="https://github.com/user-attachments/assets/6978b016-18a5-415e-9eca-d8e4834b8b7b" />
