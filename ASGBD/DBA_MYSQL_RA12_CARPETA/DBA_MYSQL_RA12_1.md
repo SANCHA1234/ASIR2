@@ -38,19 +38,19 @@ Parámetro que recopila y almacena datos de bajo nivel sobre el rendimiento inte
 ## Entrevista 1
 | Parámetro | Valor | Justificación|
 |-----------|-----------|-----------|
-|query_cache_size|65%RAM|Puesto que pide que vaya a tiempo real|
-|max_connections|x0.95|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan, pero evitamos que haya demasiadas consultas a la vez. |
-|innodb_log_file_size|50 %|Utilizando la mitad de dos discos que estén en Raid 1|
-|table_open_cache|ON|Evita que el servidor emplee tiempo en volver a sacar datos ya pedidos.
-|slow query log time|5 Segundos|Tiene que ser el acceso instantáneo|
-|innodb_file_per_table|10 % del disco|Para tener una mejor organización y evitar que el disco se llene de archivos innecesarios.|
+|innodb_buffer_pool_size|65%RAM|Puesto que pide que vaya a tiempo real|
+|max_connections|200|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan, pero evitamos que haya demasiadas consultas a la vez. |
+|innodb_log_file_size|20 %|Utilizando la mitad de dos discos que estén en Raid 1|
+|table_open_cache|200|Evita que el servidor emplee tiempo en volver a sacar datos ya pedidos.
+|long query time|5 Segundos|Tiene que ser el acceso instantáneo|
+|innodb_file_per_table|1|De esta forma queda habilitado que cada tabla innodb tenga su propio archivo .ibd.|
 |slow_query_log|ON |Saber que tablas son las más demandadas permite destinar mejor los recursos. |
-|table open cache|5% De RAM |Habilitando un límite de consultas, evitamos que el servidor pueda trabajar por encima de su capacidad.|
+
 
 ## Entrevista 2
 | Parámetro | Valor | Justificación|
 |-----------|-----------|-----------|
-|Table_open_cache|70% de Ram|De esta forma el acceso a los artículos será más rápido|
+|Table_open_cache|200|Evita que el servidor emplee tiempo en volver a sacar datos ya pedidos.|
 |max_heap_table_size|100 MB|Al tratarse de grandes volúmenes de datos. Reducimos el número de tablas.|
 |long_query_time|20 segundos|Al tratarse de una búsqueda de datos amplia, va a emplear más tiempo en buscar información|
 |slow_query_log|ON|Poder identificar cuales son los datos que  más tiempo tardan en cargar, permite adecuar los recursos.|
@@ -59,17 +59,27 @@ Parámetro que recopila y almacena datos de bajo nivel sobre el rendimiento inte
 ## Entrevista 3
 | Parámetro | Valor | Justificación|
 |-----------|-----------|-----------|
-|Max connections|0,95 de solicitudes de acceso|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan, pero evitamos que haya demasiadas consultas a la vez.|
+|Max connections|400 de solicitudes de acceso|De esta forma nos aseguramos de que todos los usuarios que quieran conectarse puedan y chatear en simultáneamente, pero evitamos que haya demasiadas consultas a la vez.|
 |innodb_flush_log_at_trx_commit|ON|Para controlar el rendimiento del disco frente a la carga de datos en el servidor|
 | innodb_log_file_size|ON|De 5 Bytes, para asegurar que los comentarios en las publicaciones se quedan guardados|
-|query_cache_size|70 % de RAM|Debido a la carga de datos constante y a la interacción de los usuarios|
+|innodb_buffer_pool_size|70 % de RAM|Debido a la carga de datos constante y a la interacción de los usuarios|
 
 # Mysql
+Para el ejemplo en los cambiios, voy a ejemplificar con un servidor de 32 Gb de RAM
 ## Archivo original
 <img width="736" height="692" alt="image" src="https://github.com/user-attachments/assets/0919687f-7f23-496b-9c90-fd7c18c2a2b6" />
 
-## Archivo cambiado
-<img width="744" height="592" alt="image" src="https://github.com/user-attachments/assets/6978b016-18a5-415e-9eca-d8e4834b8b7b" />
+## Archivo adaptado a la entrevista 1
+
+<img width="1055" height="862" alt="image" src="https://github.com/user-attachments/assets/10a41ce1-ae7e-41da-a5f8-7d56a209ea84" />
+
+## Archivo adaptado a la entrevista 2
+
+<img width="1048" height="788" alt="image" src="https://github.com/user-attachments/assets/7505ac12-a179-4681-a4bb-e2381c215eba" />
+
+## Archivo adpatado a la entrevista 3
+
+<img width="1063" height="769" alt="image" src="https://github.com/user-attachments/assets/f00ad57c-264e-4f73-9775-34a27e2b52cb" />
 
 
 
