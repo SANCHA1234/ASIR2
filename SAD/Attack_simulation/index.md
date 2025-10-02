@@ -25,16 +25,23 @@ Diccionario de letras
 ![alt text](Diccionario_palabras.png)
 Diccionario de números
 
-![alt text](diccionario_de_numeros_.png)
+![Diccionario de números](diccionario_de_numeros_.png)
 
-Diccionario de letras mayúsculas y números
 
-![alt text](Diccionario_mezclado.png)
 ### Pydictor
 
 EL primer diccionario se trata de uno formado por letras, formando palabras normales.
 
+Para hacer la fusión de ambos diccionarios, usamos este comando para darle nombre de diccionario
+
+python2 dymerge.py /home/sancha/pydictor/results/base_212720.txt /home/sancha/pydictor/results/base_213402.txt > /home/sancha/pydictor/results/diccionario 
+
+![Diccionario de letras mayúsculas y número](Diccionario_mezclado.png)
 ## 3º Ataque con la herramienta hydra en ssh
 
+### Habilitar ssh 
+![Demostración](ssh.png)
+### Nuevo usuario
+![Cambio de contraseña del usuario prueba]](nuevo_usuario.png)
 ## 4º Ataque con Hydra a un servidor web en local
 
