@@ -13,6 +13,6 @@
 EL primer diccionario se trata de uno formado por letras, formando palabras normales.
 
 ## 3º Ataque con la herramienta hydra en ssh
-
+![alt text](image-3.png)
 ## 4º Ataque con Hydra a un servidor web en local
 
