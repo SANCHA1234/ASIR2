@@ -45,5 +45,16 @@ python2 dymerge.py /home/sancha/pydictor/results/base_212720.txt /home/sancha/py
 ![Cambio de contraseña del usuario prueba](nuevo_usuario.png)
 ### Ataque con hydra mediante ssh
 ![alt text](Ataque_ssh_hydra.png)
+### Conclusiones
+En nuestro contexto, el usuario tiene una contraseña de 3 caracteres, pero en el trabajo las contraseñas
+es conveniente que sean largas y con caracteres especiales, aunque se suele recomendar no se suele hacer mucho caso.
+No obstante ante herramientas como pydictor, dymerge e hydra la seguridad se ve comprometida, cuanto más larga y mezclada
+letras números y caracteres especiales, más complicada resulta para los hackers poder descifrar contraseñas.
+
 ## 4º Ataque con Hydra a un servidor web en local
+
+1º Se inicia el servidor web
+
+![alt text](xampp.png)
+
 
