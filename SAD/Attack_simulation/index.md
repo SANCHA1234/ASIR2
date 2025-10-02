@@ -42,6 +42,8 @@ python2 dymerge.py /home/sancha/pydictor/results/base_212720.txt /home/sancha/py
 ### Habilitar ssh 
 ![Demostración](ssh.png)
 ### Nuevo usuario
-![Cambio de contraseña del usuario prueba]](nuevo_usuario.png)
+![Cambio de contraseña del usuario prueba](nuevo_usuario.png)
+### Ataque con hydra mediante ssh
+![alt text](Ataque_ssh_hydra.png)
 ## 4º Ataque con Hydra a un servidor web en local
 
