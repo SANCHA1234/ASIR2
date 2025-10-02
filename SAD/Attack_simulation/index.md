@@ -1,7 +1,7 @@
 # Simulación de ataque
 
 
-## 1º Instalacion de pydictor
+## 1º Instalacion de pydicto
 
 ![ ](<Captura de pantalla 2025-10-02 203131.png>)
 
