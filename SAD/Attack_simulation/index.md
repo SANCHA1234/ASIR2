@@ -58,9 +58,15 @@ letras números y caracteres especiales, más complicada resulta para los hacker
 Primero moviendo la carpeta a la ruta /opt/lampp/htdocs, porque los php no se pueden ejecutar sin un servidor web y si no se instala el php.
 ![alt text](<Captura de pantalla de 2025-10-03 10-52-10.png>)
 
+2º Se inicia el servidor xampp![alt text](xampp.png)
+
+3º Se crea la database
+![alt text](<Captura de pantalla de 2025-10-03 10-58-22.png>)
+
+4º Se procede a cambiar en la database la contraseña de admin, y posteriormente a cambiar la contraseña a codificarla en md5.
 
 
+![alt text](<Captura de pantalla de 2025-10-03 11-05-51.png>)
 
-![alt text](xampp.png)
-
+5º
 
