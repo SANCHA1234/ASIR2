@@ -53,7 +53,13 @@ letras números y caracteres especiales, más complicada resulta para los hacker
 
 ## 4º Ataque con Hydra a un servidor web en local
 
-1º Se inicia el servidor web
+1º Se inicia el servidor web,siguiendo los pasos
+
+Primero moviendo la carpeta a la ruta /opt/lampp/htdocs, porque los php no se pueden ejecutar sin un servidor web y si no se instala el php.
+![alt text](<Captura de pantalla de 2025-10-03 10-52-10.png>)
+
+
+
 
 ![alt text](xampp.png)
 
