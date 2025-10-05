@@ -103,3 +103,5 @@ print(f"REGLA APLICADA: {ajuste_aplicado}")
 print("PRECIO FINAL DE LA ENTRADA:")
 print(banner)
 print("=" * 50)
+
+
