@@ -53,15 +53,22 @@
 ### 14 Concede permiso de borrado sobre la tabla usuario a Bego. Muestra la sentencia utilizada y el resultado de su ejecución.
 ![alt text](image-18.png)
 ### 15 Concede permiso de lectura y actualización sobre la tabla grupo a Mati. Muestra la sentencia utilizada y el resultado de su ejecución.
-
+![alt text](image-20.png)
 ### 16 Vuelve a conectarte con tu usuario de mysql.
-
+![alt text](image-21.png)
 ### 17 Concede permisos totales sobre todas las tablas de la base de datos de la red social a Mifli. Muestra la sentencia utilizada y el resultado de su ejecución.
-
+![alt text](image-22.png)
 ### 18 Quítale permisos de borrado sobre todas las tablas de la base de datos de la red social a Mifli. Muestra la sentencia utilizada y el resultado de su ejecución.
 ![alt text](image-19.png)
 ### 19 Muestra los usuarios creados y sus privilegios (los que están en la tabla user de la base de datos mysql). Indica la sentencia que has utilizado para mostrar esos usuarios. 
-
+Bego
+![alt text](image-23.png)
+Mifli
+![alt text](image-24.png)
+Crispula
+![alt text](image-25.png)
+Mati
+![alt text](image-26.png)
 ### 20 Cambia la contraseña del usuario Mifli modificando directamente la tabla user. Indica la sentencia que has utilizado para ello.
 ![alt text](image-17.png)
 ### 21 ¿Has necesita hacer FLUSH PRIVILEGES después de la sentencia anterior? Explica el porqué y para qué sirve FLUSH PRIVILEGES.
