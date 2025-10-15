@@ -198,4 +198,75 @@ El usuario birmingan3 puede leer el contenido, pero no puede modificarlo.
 
 # Fase 2: Reto de búsquedas avanzadas
 
+Objetivo
+Uso efectivo de los comandos de búsqueda (grep, find, locate) y sus opciones para localizar información específica, archivos y directorios dentro del sistema de ficheros.
 
+Setup Inicial a realizar
+Se asume que se está en tu directorio personal.
+Creación de la Estructura de Ficheros: Crea la siguiente jerarquía de directorios y archivos.
+
+"mkdir -p Documentos/Informes Documentos/Logs Proyectos/Web Proyectos/app"
+
+![alt text](image-33.png)
+
+"touch Documentos/Logs/log_acceso.2023 Documentos/Logs/log_error.2024"
+
+![alt text](image-34.png)
+
+"touch Proyectos/Web/index.html Proyectos/Web/estilos.css"
+
+![alt text](image-35.png)
+
+"touch Proyectos/app/main.py Proyectos/app/config_dev.ini"
+
+![alt text](image-36.png)
+
+"touch Documentos/Informes/informe_final.txt"
+
+![alt text](image-37.png)
+
+Relleno de Contenido: Utiliza el comando echo o un editor de texto (como nano) para añadir el siguiente contenido a los archivos:
+
+Documentos/Logs/log_error.2024:
+
+![alt text](image-38.png)
+
+Proyectos/app/main.py:
+
+![alt text](image-40.png)
+
+Proyectos/app/config_dev.ini:
+
+![alt text](image-39.png)
+
+
+## Ejercicios de Búsqueda
+
+## I. Ejercicios con grep (Búsqueda de Contenido)
+
+Busca Errores Críticos: Muestra todas las líneas que contengan la palabra [CRIT] dentro del archivo Documentos/Logs/log_error.2024.
+
+Busca la Configuración de Producción: Dentro del directorio Proyectos, busca recursivamente (-r) en todos los archivos la cadena PATH_CONFIG.
+
+Contar Fallos: Muestra solo el número de líneas (-c) que contienen la palabra Fallo en log_error.2024.
+
+Líneas sin Comentarios: Muestra todas las líneas del archivo Proyectos/app/main.py que NO (-v) comiencen con el símbolo de comentario (#).
+
+(Pista: Usa la expresión regular ^# para indicar "empieza por #").
+
+## II. Ejercicios con find (Búsqueda de Archivos por Propiedad)
+
+Archivos de Configuración: Busca todos los archivos que terminen con la extensión .ini en todo el directorio de la práctica.
+
+Directorios Específicos: Busca todos los elementos que sean directorios (-type d) y se llamen Logs.
+
+Archivos Grandes (Simulación): Ejecuta truncate -s 2M Documentos/Informes/informe_final.txt. Ahora, busca todos los archivos (-type f) dentro de la práctica que sean mayores a 1 Megabyte (-size +1M).
+
+Archivos Modificados Recientemente: Busca todos los archivos (-type f) que hayan sido modificados (-mtime) en el último día (-1).
+
+## III. Ejercicios con locate (Búsqueda Rápida en Base de Datos)
+Nota: Si el comando locate no encuentra los archivos recién creados, se debe ejecutar sudo updatedb primero si tiene permisos.
+
+Búsqueda General: Busca rápidamente la ruta completa de todos los archivos que contienen la palabra config en su nombre.
+
+Búsqueda Sin Distinción: Busca el archivo informe_final.txt sin importar si el texto está en mayúsculas o minúsculas (-i).
