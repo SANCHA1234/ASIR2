@@ -242,7 +242,7 @@ Proyectos/app/config_dev.ini:
 
 ## Ejercicios de Búsqueda
 
-## I. Ejercicios con grep (Búsqueda de Contenido)
+## 1. Ejercicios con grep (Búsqueda de Contenido)
 
 Busca Errores Críticos: Muestra todas las líneas que contengan la palabra [CRIT] dentro del archivo Documentos/Logs/log_error.2024.
 
@@ -262,7 +262,7 @@ Líneas sin Comentarios: Muestra todas las líneas del archivo Proyectos/app/mai
 
 
 ![alt text](image-44.png)
-## II. Ejercicios con find (Búsqueda de Archivos por Propiedad)
+## 2. Ejercicios con find (Búsqueda de Archivos por Propiedad)
 
 Archivos de Configuración: Busca todos los archivos que terminen con la extensión .ini en todo el directorio de la práctica.
 
@@ -282,7 +282,7 @@ Archivos Modificados Recientemente: Busca todos los archivos (-type f) que hayan
 
 ![alt text](image-48.png)
 
-## III. Ejercicios con locate (Búsqueda Rápida en Base de Datos)
+## 3. Ejercicios con locate (Búsqueda Rápida en Base de Datos)
 Nota: Si el comando locate no encuentra los archivos recién creados, se debe ejecutar sudo updatedb primero si tiene permisos.
 
 Búsqueda General: Busca rápidamente la ruta completa de todos los archivos que contienen la palabra config en su nombre.
