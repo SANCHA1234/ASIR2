@@ -1,6 +1,6 @@
 # Ejercicio 1 Gestión de permisos en un entorno de trabajo multiusuario
 
-## Paso 1 Creación Crear un entorno simulado de usuarios y grupos
+### Paso 1 Creación Crear un entorno simulado de usuarios y grupos
 
 ![alt text](image-2.png)
 
@@ -16,7 +16,7 @@ Adhesión al grupo de los usuarios
 
 ![alt text](image-6.png)
 
-## Paso 2: Configuración de permisos básicos
+### Paso 2: Configuración de permisos básicos
 Configura los permisos para que solo los usuarios del grupo devEria2 puedan escribir en el directorio:
 
 ![alt text](image-7.png)
@@ -31,7 +31,7 @@ Grupo (devEria2): El grupo devEria2 es el grupo propietario. Los usuarios que pe
 
 Otros: Cualquier otro usuario que no sea sancha ni pertenezca al grupo devEria2 solo tiene permiso de lectura (r--). No pueden escribir ni acceder al directorio.
 
-## Paso 3: Configuración de permisos avanzados
+### Paso 3: Configuración de permisos avanzados
 monon1 debe tener permisos completos (lectura, escritura, ejecución) en todo el proyecto. Cambia el propietario del directorio a monon1:
 
 ![alt text](image-9.png)
@@ -53,12 +53,12 @@ Va a poder acceder y leer el contenido pero no va a poder modificarlo.
 Que al quitarle ese permiso, puede modificarlo, pero no va a poder guardar esos cambios.
 
 
-# Ejercicio 2 Control de Acceso con el Bit SGID en Directorios
+## Ejercicio 2 Control de Acceso con el Bit SGID en Directorios
 Escenario:
 
 El equipo de desarrollo necesita colaborar en un subdirectorio dentro de di_recto. Queremos asegurarnos de que cualquier archivo creado en ese subdirectorio tenga automáticamente el mismo grupo propietario (devEria2), para facilitar la colaboración.
 
-Paso 1: Crear un subdirectorio para colaboración
+### Paso 1: Crear un subdirectorio para colaboración
 
 Crea un subdirectorio llamado di_afano dentro de di_recto:
 
@@ -68,7 +68,7 @@ Cambia el grupo propietario del subdirectorio a devEria2:
 
 ![alt text](image-14.png)
 
-Paso 2: Aplicar el bit SGID
+### Paso 2: Aplicar el bit SGID
 
 Aplica el bit SGID al subdirectorio di_afano, para que todos los archivos creados en él hereden el grupo propietario:
 
@@ -76,75 +76,126 @@ Aplica el bit SGID al subdirectorio di_afano, para que todos los archivos creado
 
 Verifica y muestra los permisos del subdirectorio:
 
-Paso 3: Crear archivos de prueba
+![alt text](image-17.png)
+
+### Paso 3: Crear archivos de prueba
 
 Cambia a tronko2 y crea un archivo llamado archivo_tronko2.txt dentro del subdirectorio di_afano:
 
+![alt text](image-19.png)
+
 Verifica y muestra los permisos y el grupo propietario del archivo:
+
+![alt text](image-20.png)
+
+Para poder crear el archivo he tenido que meter al usuario sancha en el grupo, para que formara parte del grupo y el resto
+de miembros puedan modificar.
 
 Preguntas:
 
 ¿Cuál es el grupo propietario del archivo creado por tronko2?
 
+El propietario es el usuario tronko2
+
 ¿Qué ventaja aporta el bit SGID en un entorno de colaboración?
 
-Ejercicio 3: Gestión de Archivos Temporales con Sticky Bit
+Que permite al resto de usuarios de forma automática tener asignados los permisos de modificar el archivo
+
+
+## Ejercicio 3: Gestión de Archivos Temporales con Sticky Bit
 Escenario:
 
 Se ha creado un directorio temporal compartido entre todos los usuarios del sistema. Necesitas asegurarte de que los usuarios puedan crear y modificar sus propios archivos, pero no puedan eliminar o modificar los archivos de otros usuarios.
 
-Paso 1: Crear un directorio temporal
+### Paso 1: Crear un directorio temporal
 
 Crea un directorio llamado tmp_ran0 en /tmp:
 
+![alt text](image-21.png)
+
 Cambia los permisos para que todos los usuarios puedan leer, escribir y ejecutar en el directorio:
 
-Paso 2: Aplicar el sticky bit
+![alt text](image-22.png)
+
+### Paso 2: Aplicar el sticky bit
 
 Aplica el sticky bit al directorio para evitar que los usuarios eliminen archivos de otros:
 
+![alt text](image-23.png)
+
+Se ha aplicado para los usuarios que no pertenecen al grupo devEria2 ni son propietarios
+
 Verifica los permisos del directorio:
 
-Paso 3: Crear archivos de prueba
+![alt text](image-24.png)
+
+### Paso 3: Crear archivos de prueba
 
 Cambia a monon1 y crea un archivo en el directorio temporal:
 
+![alt text](image-25.png)
+
 Cambia a birmingan3 y verifica si puede eliminar el archivo de monon1:
+
+![alt text](image-26.png)
 
 Preguntas:
 
 ¿Pudo birmingan3 eliminar el archivo de monon1? ¿Por qué?
 
+No puede borrar el archivo porque los permisos en el directorio, no se han heredado en los archivos que están 
+dentro del directorio
+
 ¿Cómo ayuda el sticky bit a mejorar la seguridad en directorios compartidos?
 
-Ejercicio 4: Configuración de umask y Creación de Archivos Nuevos
+Evita que usuarios que no pertenecen al grupo puedan borrar y los miembros del grupo no puedan
+
+## Ejercicio 4: Configuración de umask y Creación de Archivos Nuevos
 Escenario:
 
 Quieres configurar el entorno de trabajo para que todos los archivos nuevos creados por los usuarios tengan permisos predeterminados restrictivos (solo lectura y escritura para el propietario, sin acceso para el grupo y otros).
 
-Paso 1: Configurar umask
+### Paso 1: Configurar umask
 
 Verifica el valor actual de umask:
 
+![ ](image-27.png)
 Cambia el valor de umask a 077 para que los archivos creados sean accesibles solo por el propietario:
 
-Paso 2: Crear archivos de prueba
+![alt text](image-28.png)
+### Paso 2: Crear archivos de prueba
 
 Crea un archivo nuevo llamado gomaesp_umask y verifica sus permisos:
 
-Paso 3: Restablecer umask
+![alt text](image-29.png)
+
+### Paso 3: Restablecer umask
 
 Si deseas restaurar el valor predeterminado de umask, puedes hacerlo:
 
-Preguntas:
+![alt text](image-30.png)
 
-¿Cómo afectó el valor de umask a los permisos de los nuevos archivos?
+### Preguntas:
 
-¿Cómo podrías usar umask para mejorar la seguridad de los archivos en un sistema multiusuario?
+#### ¿Cómo afectó el valor de umask a los permisos de los nuevos archivos?
 
-Ejercicio 5: Implementación de ACLs
+Impedía que el resto de usuarios puedan acceder o modificar el archivo, aunque estén dentro del mismo grupo
+
+#### ¿Cómo podrías usar umask para mejorar la seguridad de los archivos en un sistema multiusuario?
+
+#### Evita que cualquier usario aunque esté dentro de un grupo, pueda modificar archivos personales de otros usuarios.
+
+## Ejercicio 5: Implementación de ACLs
 Queremos que birmingan3 pueda leer un archivo específico dentro de un nuevo directorio que se tiene que crear llamado archivos_criticos, pero sin poder modificarlo.
 
 Habilita ACLs en el sistema si no están habilitadas (si ya lo están, omite este paso):
 
-(El resto del ejercicio no es visible en la imagen.)
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+El usuario birmingan3 puede leer el contenido, pero no puede modificarlo.
+
+# Fase 2: Reto de búsquedas avanzadas
+
+
