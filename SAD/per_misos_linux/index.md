@@ -1,6 +1,6 @@
-# Ejercicio 1 Gestión de permisos en un entorno de trabajo multiusuario
+# Ejercicio 1: Gestión de permisos en un entorno de trabajo multiusuario
 
-### Paso 1 Creación Crear un entorno simulado de usuarios y grupos
+### Paso 1: Creación Crear un entorno simulado de usuarios y grupos
 
 ![alt text](image-2.png)
 
@@ -53,7 +53,7 @@ Va a poder acceder y leer el contenido pero no va a poder modificarlo.
 Que al quitarle ese permiso, puede modificarlo, pero no va a poder guardar esos cambios.
 
 
-## Ejercicio 2 Control de Acceso con el Bit SGID en Directorios
+## Ejercicio 2: Control de Acceso con el Bit SGID en Directorios
 Escenario:
 
 El equipo de desarrollo necesita colaborar en un subdirectorio dentro de di_recto. Queremos asegurarnos de que cualquier archivo creado en ese subdirectorio tenga automáticamente el mismo grupo propietario (devEria2), para facilitar la colaboración.
