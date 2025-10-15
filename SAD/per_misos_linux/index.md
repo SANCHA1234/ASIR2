@@ -246,27 +246,49 @@ Proyectos/app/config_dev.ini:
 
 Busca Errores Críticos: Muestra todas las líneas que contengan la palabra [CRIT] dentro del archivo Documentos/Logs/log_error.2024.
 
+![alt text](image-41.png)
+
 Busca la Configuración de Producción: Dentro del directorio Proyectos, busca recursivamente (-r) en todos los archivos la cadena PATH_CONFIG.
 
+![alt text](image-42.png)
+
 Contar Fallos: Muestra solo el número de líneas (-c) que contienen la palabra Fallo en log_error.2024.
+
+![alt text](image-43.png)
 
 Líneas sin Comentarios: Muestra todas las líneas del archivo Proyectos/app/main.py que NO (-v) comiencen con el símbolo de comentario (#).
 
 (Pista: Usa la expresión regular ^# para indicar "empieza por #").
 
+
+![alt text](image-44.png)
 ## II. Ejercicios con find (Búsqueda de Archivos por Propiedad)
 
 Archivos de Configuración: Busca todos los archivos que terminen con la extensión .ini en todo el directorio de la práctica.
 
+![alt text](image-45.png)
+
 Directorios Específicos: Busca todos los elementos que sean directorios (-type d) y se llamen Logs.
+
+![alt text](image-46.png)
 
 Archivos Grandes (Simulación): Ejecuta truncate -s 2M Documentos/Informes/informe_final.txt. Ahora, busca todos los archivos (-type f) dentro de la práctica que sean mayores a 1 Megabyte (-size +1M).
 
+![alt text](image-49.png)
+
+![alt text](image-47.png)
+
 Archivos Modificados Recientemente: Busca todos los archivos (-type f) que hayan sido modificados (-mtime) en el último día (-1).
+
+![alt text](image-48.png)
 
 ## III. Ejercicios con locate (Búsqueda Rápida en Base de Datos)
 Nota: Si el comando locate no encuentra los archivos recién creados, se debe ejecutar sudo updatedb primero si tiene permisos.
 
 Búsqueda General: Busca rápidamente la ruta completa de todos los archivos que contienen la palabra config en su nombre.
 
+![alt text](image-50.png)
+
 Búsqueda Sin Distinción: Busca el archivo informe_final.txt sin importar si el texto está en mayúsculas o minúsculas (-i).
+
+![alt text](image-51.png)
