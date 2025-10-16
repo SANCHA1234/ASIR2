@@ -292,3 +292,4 @@ Búsqueda General: Busca rápidamente la ruta completa de todos los archivos que
 Búsqueda Sin Distinción: Busca el archivo informe_final.txt sin importar si el texto está en mayúsculas o minúsculas (-i).
 
 ![alt text](image-51.png)
+

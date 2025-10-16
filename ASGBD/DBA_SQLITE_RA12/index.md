@@ -1,0 +1,99 @@
+# Gestión y Configuración de Bases de Datos SQLite
+
+Requisitos del entorno:
+
+1. Instalación de SQLite3: Asegúrate de tener SQLite instalado en tu entorno de trabajo. Puedes verificarlo con sqlite3 -version.
+![alt text](image.png)
+2. Crea una base de datos llamada frutas.db que almacenará la información de mandarinas, melocotones y caquis.
+
+![alt text](image-1.png)
+
+![
+    
+](image-2.png)
+1. Configuración de la base de datos (2 puntos)
+
+1.1. Creación de tablas y estructura
+
+Crea las siguientes tablas básicas con las restricciones adecuadas:
+
+Mandarinas:
+
+id_mandarina (INTEGER, PK, AUTOINCREMENT): Identificador único para cada mandarina.
+
+tipo (TEXT, NOT NULL): Color o tipo de mandarina.
+
+origen (TEXT, NOT NULL): Tipo de mandarina.
+
+tamano (TEXT, NOT NULL): Tamaño de la mandarina.
+
+fecha_recogida (TEXT, NOT NULL): Fecha en la que se recogió la mandarina.
+
+![alt text](image-3.png)
+Melocotones:
+
+id_melocoton (INTEGER, PK, AUTOINCREMENT): Identificador único para cada melocotón.
+
+tipo (TEXT, NOT NULL): Tipo de melocotón.
+
+indicemadurez (BOOLEAN, NOT NULL): Indica si el melocotón es suave (1) o no (0).
+
+![alt text](image-4.png)
+
+Caquis:
+
+id_caqui (INTEGER, PK, AUTOINCREMENT): Identificador único para cada caqui.
+
+id_mandarina (INTEGER, FK, NOT NULL): Relacionado con id_mandarina en la tabla Mandarinas.
+
+id_melocoton (INTEGER, FK, NOT NULL): Relacionado con id_melocoton en la tabla Melocotones.
+
+
+```SQL
+CREATE TABLE Caquis(
+    id caqui INTEGER NOT NULL,
+    color text not null,
+    pedunculo boolean NOT NULL,
+    timepo_maduracion INTEGER not null,
+    id_mandarinas INTEGER not null, 
+    id_melocoton INTEGER not null,
+    FOREIGN KEY (id_mandarinas) REFERENCES mandarinas (id_mandarina),
+    FOREIGN KEY (id_melocoton )
+    REFERENCES Melocotones (id_melocoton));  
+```
+tipo (TEXT, NOT NULL): Tipo de caqui.
+
+![alt text](image-5.png)
+
+es_premium (BOOLEAN, NOT NULL): Indica si el caqui tiene profundidad (1) o no (0).
+
+tiempo_maduracion (INTEGER, NOT NULL): Tiempo de maduración en días.
+
+![alt text](image-6.png)
+1.2. Tamaño y más...
+
+Justifica cuánto ocupa tu base de datos en disco. ¿En qué momento aumenta de tamaño? Si se mete más info, ¿cómo DBA harías algo para optimizar esto?
+![alt text](image-7.png)
+2. Optimización del rendimiento y mantenimiento (5 puntos)
+
+Se ha encontrado un trozo de las consultas a la base de datos durante el día 27 de octubre de 2024. Se pide qué optimizaciones realizarías y por qué para mejorar la base de datos en función de la información que te ofrece el log y justifícalo.
+
+Pista: Utiliza EXPLAIN QUERY PLAN y comprueba todos los planes de ajuste.
+
+3. Copias de seguridad y restauración (2.5 puntos)
+
+3.1. Realización de una copia de seguridad con el nombre frutas_bonitas_bonitas.db.
+
+3.2. Realiza la restauración desde la copia de seguridad
+
+3.3. Automatización de backups
+
+Crea un script para backups automáticos y que ejecute todos los días a las 23:59:59.
+
+4. Preguntas sin Chatgpt ni IA: (0.5 puntos)
+
+¿Cómo impactan los cambios en el PRAGMA en el rendimiento y la seguridad de la base de datos?
+
+¿Qué herramientas usarías para proteger una base de datos SQLite en un entorno de producción?
+
+¿Qué diferencia existe entre un sistema de gestión como SQLite, Firebird, MySql y MariaDB?
