@@ -73,16 +73,22 @@ tiempo_maduracion (INTEGER, NOT NULL): Tiempo de maduración en días.
 1.2. Tamaño y más...
 
 Justifica cuánto ocupa tu base de datos en disco. ¿En qué momento aumenta de tamaño? Si se mete más info, ¿cómo DBA harías algo para optimizar esto?
+
 ![alt text](image-7.png)
+
 2. Optimización del rendimiento y mantenimiento (5 puntos)
 
 Se ha encontrado un trozo de las consultas a la base de datos durante el día 27 de octubre de 2024. Se pide qué optimizaciones realizarías y por qué para mejorar la base de datos en función de la información que te ofrece el log y justifícalo.
+
+En mi opinión, probaría a implementar índices para poder mejorar el acceso a la información y en las búsquedas más recursivas la haría más accesible.
 
 Pista: Utiliza EXPLAIN QUERY PLAN y comprueba todos los planes de ajuste.
 
 3. Copias de seguridad y restauración (2.5 puntos)
 
 3.1. Realización de una copia de seguridad con el nombre frutas_bonitas_bonitas.db.
+
+
 
 3.2. Realiza la restauración desde la copia de seguridad
 
