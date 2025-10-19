@@ -11,9 +11,9 @@ Requisitos del entorno:
 ![
     
 ](image-2.png)
-1. Configuración de la base de datos (2 puntos)
+# 1. Configuración de la base de datos (2 puntos)
 
-1.1. Creación de tablas y estructura
+## 1.1. Creación de tablas y estructura
 
 Crea las siguientes tablas básicas con las restricciones adecuadas:
 
@@ -70,36 +70,42 @@ es_premium (BOOLEAN, NOT NULL): Indica si el caqui tiene profundidad (1) o no (0
 tiempo_maduracion (INTEGER, NOT NULL): Tiempo de maduración en días.
 
 ![alt text](image-6.png)
-1.2. Tamaño y más...
+## 1.2. Tamaño y más...
 
 Justifica cuánto ocupa tu base de datos en disco. ¿En qué momento aumenta de tamaño? Si se mete más info, ¿cómo DBA harías algo para optimizar esto?
 
 ![alt text](image-7.png)
 
-2. Optimización del rendimiento y mantenimiento (5 puntos)
+# 2. Optimización del rendimiento y mantenimiento (5 puntos)
 
 Se ha encontrado un trozo de las consultas a la base de datos durante el día 27 de octubre de 2024. Se pide qué optimizaciones realizarías y por qué para mejorar la base de datos en función de la información que te ofrece el log y justifícalo.
 
-En mi opinión, probaría a implementar índices para poder mejorar el acceso a la información y en las búsquedas más recursivas la haría más accesible.
+Se puede proponer en base a todas las búsquedas realizadas, ver cuales son más frecuentes y hacer un índice exclusivo sobre esas búsquedas. Para ello, crea índices complejos que sirvan para una búsqueda de datos más precisa.
 
-Pista: Utiliza EXPLAIN QUERY PLAN y comprueba todos los planes de ajuste.
+Sqlite tiene una opción con explain query plan como "scan table" que escanea la tabla y si las tablas no tienen índices que permitan buscar datos de forma más exacta, se puede implementar.
 
-3. Copias de seguridad y restauración (2.5 puntos)
+# 3. Copias de seguridad y restauración (2.5 puntos)
 
-3.1. Realización de una copia de seguridad con el nombre frutas_bonitas_bonitas.db.
+## 3.1. Realización de una copia de seguridad con el nombre frutas_bonitas_bonitas.db.
 
 
 
-3.2. Realiza la restauración desde la copia de seguridad
+## 3.2. Realiza la restauración desde la copia de seguridad
 
-3.3. Automatización de backups
+## 3.3. Automatización de backups
 
 Crea un script para backups automáticos y que ejecute todos los días a las 23:59:59.
 
-4. Preguntas sin Chatgpt ni IA: (0.5 puntos)
+## 4. Preguntas sin Chatgpt ni IA: (0.5 puntos)
 
 ¿Cómo impactan los cambios en el PRAGMA en el rendimiento y la seguridad de la base de datos?
 
+El pragma es el conjunto de ajustes de la bbdd, si se fuerzan a algunos cambios , como activar el modo síncrono obliga a sqlite a confirmar los cambios, ralentiza el rendimiento pero evita la pérdida de datos.
+
 ¿Qué herramientas usarías para proteger una base de datos SQLite en un entorno de producción?
 
+En primer lugar utilizaría un algoritmo para codificar los datos como puede ser AES y ejecutaría un script todos los días backups incrementales y un backup full una vez a la semana, para evitar que se pierdan los datos o si entran y borran los datos, poder restaurarlos.
+
 ¿Qué diferencia existe entre un sistema de gestión como SQLite, Firebird, MySql y MariaDB?
+
+Sqlite se utiliza para administrar datos a bajo nivel y no necesita tener que descargar librerías, mientras que firebird mysql y mariadb, se utilizan para servidores más robustos para aplicaciones web y de mayor escala.
