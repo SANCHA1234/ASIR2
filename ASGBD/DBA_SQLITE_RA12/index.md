@@ -8,9 +8,7 @@ Requisitos del entorno:
 
 ![alt text](image-1.png)
 
-![
-    
-](image-2.png)
+![alt text](image-2.png)
 # 1. Configuración de la base de datos (2 puntos)
 
 ## 1.1. Creación de tablas y estructura
