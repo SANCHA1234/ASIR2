@@ -92,6 +92,8 @@ Sqlite tiene una opción con explain query plan como "scan table" que escanea la
 
 ## 3.2. Realiza la restauración desde la copia de seguridad
 
+![alt text](image-9.png)
+
 ## 3.3. Automatización de backups
 
 Crea un script para backups automáticos y que ejecute todos los días a las 23:59:59.
