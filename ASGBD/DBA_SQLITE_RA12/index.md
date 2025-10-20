@@ -88,7 +88,7 @@ Sqlite tiene una opción con explain query plan como "scan table" que escanea la
 
 ## 3.1. Realización de una copia de seguridad con el nombre frutas_bonitas_bonitas.db.
 
-
+![alt text](image-8.png)
 
 ## 3.2. Realiza la restauración desde la copia de seguridad
 
@@ -106,6 +106,6 @@ El pragma es el conjunto de ajustes de la bbdd, si se fuerzan a algunos cambios 
 
 En primer lugar utilizaría un algoritmo para codificar los datos como puede ser AES y ejecutaría un script todos los días backups incrementales y un backup full una vez a la semana, para evitar que se pierdan los datos o si entran y borran los datos, poder restaurarlos.
 
-¿Qué diferencia existe entre un sistema de gestión como SQLite, Firebird, MySql y MariaDB?
+¿Que diferencia existe entre los modos de journaling como "delete" "truncate" "wal" en sqlite?
 
-Sqlite se utiliza para administrar datos a bajo nivel y no necesita tener que descargar librerías, mientras que firebird mysql y mariadb, se utilizan para servidores más robustos para aplicaciones web y de mayor escala.
+En primer lugar, delete borra el dato, especificando con la condicion where, pero no borra todos los datos de la tabla, cosa que si hace la función de truncate. Mientras que WAl, funciona copiando el contenido original de la base de datos, sin modificaciones, en un archivo separado y, a continuación, escribiendo los cambios directamente en dicho archivo.
