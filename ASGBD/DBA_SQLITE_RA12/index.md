@@ -82,6 +82,13 @@ Se puede proponer en base a todas las búsquedas realizadas, ver cuales son más
 
 Sqlite tiene una opción con explain query plan como "scan table" que escanea la tabla y si las tablas no tienen índices que permitan buscar datos de forma más exacta, se puede implementar.
 
+``` SQL 
+
+CREATE INDEX recogida ON Mandarinas (fecha_recogida);
+
+EXPLAIN QUERY PLAN SELECT * FROM Mandarinas WHERE color = 'verde'; 
+```
+
 # 3. Copias de seguridad y restauración (2.5 puntos)
 
 ## 3.1. Realización de una copia de seguridad con el nombre frutas_bonitas_bonitas.db.
