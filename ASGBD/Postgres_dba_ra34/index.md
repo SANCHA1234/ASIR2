@@ -69,7 +69,7 @@ Crea un usuario user_consultas que solo pueda realizar consultas en la base de d
 
 Crea un usuario user_lectura que pueda ver datos en la base de datos pero no modificarlos.
 
-
+![alt text](image-10.png)
 
 ## Ejercicio 2: Asignar permisos
 
@@ -77,21 +77,37 @@ Conéctate a la base de datos EquitacionSuave.
 
 Asigna permisos de consulta (SELECT) a user_consultas sobre las tablas jinetes y caballos.
 
+![alt text](image-11.png) 
+
 Configura permisos para user_lectura para que solo pueda ver datos y no modificar/borrar/añadir nada.
 
+![alt text](image-12.png)
+
 Da permisos completos (SELECT, INSERT, UPDATE, DELETE) al usuario admin_equitacion en las tablas jinetes y caballos.
+
+![alt text](image-13.png)
 
 # 4. Inserción de Datos en las Tablas
 Inserta varios registros en la tabla jinetes con diferentes valores de nombre, apellido, categoría y experiencia_años.
 
+![alt text](image-14.png) 
+
 Inserta varios registros en la tabla caballos, especificando el nombre, raza, edad y el jinete_id correspondiente.
+
+![alt text](image-15.png)
 
 # 5. Consultas de Datos
 Realiza una consulta para obtener todos los registros de la tabla jinetes.
 
+![alt text](image-16.png)
+
 Realiza una consulta que muestre solo los jinetes con más de dos años de experiencia.
 
+![alt text](image-17.png)
+
 Realiza una consulta para obtener los nombres de los caballos junto con los nombres de sus dueños/jinetes.
+
+![alt text](image-18.png)
 
 # 6. Actualización y Eliminación de Datos
 Realiza una actualización en la tabla jinetes para cambiar la categoría de un jinete.
