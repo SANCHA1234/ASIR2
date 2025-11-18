@@ -14,14 +14,18 @@ Cambia el usuario postgres y abre la consola de PostgreSQL.
 ![alt text](image-3.png)
 
 # 2. Creación de la Base de Datos y Tablas
-Paso 1: Crear la base de datos
-
+### Paso 1: Crear la base de datos
 
 Conéctate a la consola de PostgreSQL como el usuario postgres.
 
+
+
 Crea la base de datos llamada EquitacionSuave y conéctate a ella.
 
-Paso 2: Crear las tablas principales
+![alt text](image-4.png)
+
+
+### Paso 2: Crear las tablas principales
 
 Crea una tabla llamada jinetes que incluya los siguientes campos:
 
@@ -85,27 +89,27 @@ Realiza una eliminación en la tabla jinetes para borrar un registro específico
 
 # 7. Uso de pgAdmin para Administración Visual
 
-Paso 1: Acceso a pgAdmin y conexión al servidor PostgreSQL
+### Paso 1: Acceso a pgAdmin y conexión al servidor PostgreSQL
 
 Abre pgAdmin y conéctate al servidor PostgreSQL usando las credenciales de postgres.
 
 Verifica la conexión y accede a la tabla de bases de datos.
 
-Paso 2: Crear la base de datos EquitacionSuave
+### Paso 2: Crear la base de datos EquitacionSuave
 
 En pgAdmin, crea la base de datos EquitacionSuave con postgres como propietario.
 
-Paso 3: Crear las tablas jinetes y caballos
+### Paso 3: Crear las tablas jinetes y caballos
 
 Envía la consulta Schema $\rightarrow$ public $\rightarrow$ Tables de pgAdmin, con la tabla jinetes con los campos mencionados en el paso 2.
 
 Crea también la tabla caballos con los campos requeridos y la referencia a la tabla jinetes.
 
-Paso 4: Insertar y consultar datos
+### Paso 4: Insertar y consultar datos
 
 Utiliza la herramienta de consulta (Query Tool) de pgAdmin para insertar y consultar datos en ambas tablas.
 
-Paso 5: Crear y administrar usuarios y roles en pgAdmin
+### Paso 5: Crear y administrar usuarios y roles en pgAdmin
 
 En Login/Group Roles de pgAdmin, crea los usuarios admin_equitacion, user_consultas y user_lectura.
 
