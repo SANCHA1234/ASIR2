@@ -18,7 +18,7 @@ Cambia el usuario postgres y abre la consola de PostgreSQL.
 
 Conéctate a la consola de PostgreSQL como el usuario postgres.
 
-
+![alt text](image-5.png)
 
 Crea la base de datos llamada EquitacionSuave y conéctate a ella.
 
@@ -39,6 +39,8 @@ categoría: una cadena que representa el nivel de habilidad (e.g., Avanzado, Int
 
 experiencia_años: un número entero que indica los años de experiencia.
 
+![alt text](image-6.png)
+
 Crea otra tabla llamada caballos que incluya los siguientes campos:
 
 id: un identificador único autoincrementado para cada caballo.
@@ -51,14 +53,23 @@ edad: un número entero que representa la edad del caballo.
 
 jinete_id: una referencia al id de la tabla jinetes, para indicar quién es el dueño actual del caballo.
 
+![alt text](image-7.png)
+
+
 # 3. Gestión de Usuarios y Roles
 ## Ejercicio 1: Crear usuarios con distintos niveles de permisos
 
 Crea un usuario admin_equitacion con permisos para iniciar sesión en PostgreSQL y con la capacidad de crear bases de datos.
 
+![alt text](image-8.png)
+
 Crea un usuario user_consultas que solo pueda realizar consultas en la base de datos.
 
+![alt text](image-9.png)
+
 Crea un usuario user_lectura que pueda ver datos en la base de datos pero no modificarlos.
+
+
 
 ## Ejercicio 2: Asignar permisos
 
