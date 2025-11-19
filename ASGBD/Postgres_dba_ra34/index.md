@@ -58,7 +58,7 @@ jinete_id: una referencia al id de la tabla jinetes, para indicar quién es el d
 
 # 3. Gestión de Usuarios y Roles
 ## Ejercicio 1: Crear usuarios con distintos niveles de permisos
-
+ 
 Crea un usuario admin_equitacion con permisos para iniciar sesión en PostgreSQL y con la capacidad de crear bases de datos.
 
 ![alt text](image-8.png)
