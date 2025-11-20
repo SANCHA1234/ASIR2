@@ -112,10 +112,17 @@ Realiza una consulta para obtener los nombres de los caballos junto con los nomb
 # 6. Actualización y Eliminación de Datos
 Realiza una actualización en la tabla jinetes para cambiar la categoría de un jinete.
 
-
+![alt text](image-43.png)
 
 Realiza una eliminación en la tabla jinetes para borrar un registro específico.
 
+Antes de eliminar:
+
+![alt text](image-44.png)
+
+Después de borrar el registro:
+
+![alt text](image-45.png)
 
 
 # 7. Uso de pgAdmin para Administración Visual
@@ -152,12 +159,14 @@ Crea también la tabla caballos con los campos requeridos y la referencia a la t
 ### Paso 4: Insertar y consultar datos
 
 Utiliza la herramienta de consulta (Query Tool) de pgAdmin para insertar y consultar datos en ambas tablas.
-
+ 
 ![alt text](image-41.png)
 
 ![alt text](image-40.png)
 
 Consulta de datos
+
+![alt text](image-42.png)
 
 ![alt text](image-39.png)
 
