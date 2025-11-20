@@ -141,12 +141,29 @@ En pgAdmin, crea la base de datos EquitacionSuave con postgres como propietario.
 
 Envía la consulta Schema $\rightarrow$ public $\rightarrow$ Tables de pgAdmin, con la tabla jinetes con los campos mencionados en el paso 2.
 
+![alt text](image-33.png)
+
 Crea también la tabla caballos con los campos requeridos y la referencia a la tabla jinetes.
+
+![alt text](image-34.png)
+
+![alt text](image-35.png)
 
 ### Paso 4: Insertar y consultar datos
 
 Utiliza la herramienta de consulta (Query Tool) de pgAdmin para insertar y consultar datos en ambas tablas.
 
+![alt text](image-41.png)
+
+![alt text](image-40.png)
+
+Consulta de datos
+
+![alt text](image-39.png)
+
+Si intentas añadir una fila sin incluirla en la tabla jinetes, no te deja.
+
+![alt text](image-38.png)
 ### Paso 5: Crear y administrar usuarios y roles en pgAdmin
 
 En Login/Group Roles de pgAdmin, crea los usuarios admin_equitacion, user_consultas y user_lectura.
