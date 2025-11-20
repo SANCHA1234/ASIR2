@@ -124,11 +124,18 @@ Realiza una eliminación en la tabla jinetes para borrar un registro específico
 
 Abre pgAdmin y conéctate al servidor PostgreSQL usando las credenciales de postgres.
 
+![alt text](image-30.png)
+
 Verifica la conexión y accede a la tabla de bases de datos.
+
+![alt text](image-31.png)
 
 ### Paso 2: Crear la base de datos EquitacionSuave
 
 En pgAdmin, crea la base de datos EquitacionSuave con postgres como propietario.
+
+
+![alt text](image-32.png)
 
 ### Paso 3: Crear las tablas jinetes y caballos
 
