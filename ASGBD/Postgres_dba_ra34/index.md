@@ -165,16 +165,43 @@ values ('Luis','Diaz','avanzado',30, {Salto} Victorias: [10]);
 ## Ejercicio 2: Uso de arreglos (ARRAYS) para certificaciones
 Añade una columna certificaciones de tipo ARRAY en la tabla jinetes.
 
+![alt text](image-22.png)
+
 Actualiza uno de los registros en jinetes para almacenar múltiples certificaciones en la columna certificaciones.
+
+```SQL
+Update jinetes set certificaciones = ARRAY[ 'Nivel 1', 'Basico'] WHERE NOMBRE = 'Paco';
+
+```
+
+![alt text](image-23.png)
 
 ## Ejercicio 3: Creación de Vistas Materializadas
 Crea una vista materializada llamada vista_jinetes_avanzados que contenga los registros de jinetes cuya categoría sea Avanzada.
 
+![alt text](image-25.png)
+
 Realiza una operación para actualizar los datos de la vista materializada.
+``` SQL
+Update  jinetes set NOMBRE = 'julio' WHERE nivel = 'Avanzado';
+```
+
+![alt text](image-26.png)
 
 ## Ejercicio 4: Herencia en Tablas para gestionar equipos de equitación
 Crea una tabla base llamada equipo_base con las columnas id, nombre y tipo.
 
+![alt text](image-27.png)
+
 Crea una tabla heredada llamada equipo_de_salto que extienda equipo_base y añada un campo altura_máxima para especificar la altura máxima permitida del equipo.
 
+![alt text](image-28.png)
+
 Inserta un registro en la tabla equipo_de_salto.
+
+``` SQL
+
+INSERT INTO equipo_de_salto (id,nombre,tipo,altura_maxima)
+values (1,'Marcos','infantil','5');
+```
+![alt text](image-29.png)
