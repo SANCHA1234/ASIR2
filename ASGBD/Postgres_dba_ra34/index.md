@@ -112,7 +112,11 @@ Realiza una consulta para obtener los nombres de los caballos junto con los nomb
 # 6. Actualización y Eliminación de Datos
 Realiza una actualización en la tabla jinetes para cambiar la categoría de un jinete.
 
+
+
 Realiza una eliminación en la tabla jinetes para borrar un registro específico.
+
+
 
 # 7. Uso de pgAdmin para Administración Visual
 
@@ -142,23 +146,33 @@ En Login/Group Roles de pgAdmin, crea los usuarios admin_equitacion, user_consul
 
 Asigna los permisos correspondientes a cada usuario en las tablas jinetes y caballos usando la interfaz gráfica de pgAdmin
 
-II. Características Avanzadas de PostgreSQL
-Ejercicio 1: Uso de JSON en la tabla jinetes
+# 8.II. Características Avanzadas de PostgreSQL
+## Ejercicio 1: Uso de JSON en la tabla jinetes
 Añade una columna llamada detalles_competencias de tipo JSON en la tabla jinetes.
+
+![alt text](image-19.png)
 
 Inserta un nuevo registro en la tabla jinetes y utiliza la columna detalles_competencias para almacenar datos en formato JSON que incluya las competencias y el número de victorias del jinete.
 
-Ejercicio 2: Uso de arreglos (ARRAYS) para certificaciones
+```SQL
+iNSERT INTO jinetes (nombre,apellidos,categoria,experiencia_años,detalles_competencias)
+values ('Luis','Diaz','avanzado',30, {Salto} Victorias: [10]);
+```
+![alt text](image-20.png)
+
+![alt text](image-21.png)
+
+## Ejercicio 2: Uso de arreglos (ARRAYS) para certificaciones
 Añade una columna certificaciones de tipo ARRAY en la tabla jinetes.
 
 Actualiza uno de los registros en jinetes para almacenar múltiples certificaciones en la columna certificaciones.
 
-Ejercicio 3: Creación de Vistas Materializadas
+## Ejercicio 3: Creación de Vistas Materializadas
 Crea una vista materializada llamada vista_jinetes_avanzados que contenga los registros de jinetes cuya categoría sea Avanzada.
 
 Realiza una operación para actualizar los datos de la vista materializada.
 
-Ejercicio 4: Herencia en Tablas para gestionar equipos de equitación
+## Ejercicio 4: Herencia en Tablas para gestionar equipos de equitación
 Crea una tabla base llamada equipo_base con las columnas id, nombre y tipo.
 
 Crea una tabla heredada llamada equipo_de_salto que extienda equipo_base y añada un campo altura_máxima para especificar la altura máxima permitida del equipo.
