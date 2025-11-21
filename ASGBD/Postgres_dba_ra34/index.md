@@ -152,7 +152,9 @@ Envía la consulta Schema $\rightarrow$ public $\rightarrow$ Tables de pgAdmin, 
 
 Crea también la tabla caballos con los campos requeridos y la referencia a la tabla jinetes.
 
+![alt text](image-51.png)
 
+![alt text](image-52.png)
 
 ### Paso 4: Insertar y consultar datos
 
