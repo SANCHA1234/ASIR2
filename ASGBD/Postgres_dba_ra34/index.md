@@ -152,9 +152,7 @@ Envía la consulta Schema $\rightarrow$ public $\rightarrow$ Tables de pgAdmin, 
 
 Crea también la tabla caballos con los campos requeridos y la referencia a la tabla jinetes.
 
-![alt text](image-34.png)
 
-![alt text](image-35.png)
 
 ### Paso 4: Insertar y consultar datos
 
@@ -177,7 +175,17 @@ Si intentas añadir una fila sin incluirla en la tabla jinetes, no te deja.
 
 En Login/Group Roles de pgAdmin, crea los usuarios admin_equitacion, user_consultas y user_lectura.
 
+![alt text](image-46.png)
+
+![alt text](image-47.png)
+
 Asigna los permisos correspondientes a cada usuario en las tablas jinetes y caballos usando la interfaz gráfica de pgAdmin
+
+![alt text](image-48.png)
+
+![alt text](image-49.png)
+
+![alt text](image-50.png)
 
 # 8.II. Características Avanzadas de PostgreSQL
 ## Ejercicio 1: Uso de JSON en la tabla jinetes
