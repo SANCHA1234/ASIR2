@@ -177,17 +177,18 @@ Si intentas añadir una fila sin incluirla en la tabla jinetes, no te deja.
 
 En Login/Group Roles de pgAdmin, crea los usuarios admin_equitacion, user_consultas y user_lectura.
 
-![alt text](image-46.png)
-
-![alt text](image-47.png)
 
 Asigna los permisos correspondientes a cada usuario en las tablas jinetes y caballos usando la interfaz gráfica de pgAdmin
 
-![alt text](image-48.png)
+Tabla Caballos
 
-![alt text](image-49.png)
+![alt text](image-58.png)
 
-![alt text](image-50.png)
+
+Tabla jinetes
+
+
+![alt text](image-57.png)
 
 # 8.II. Características Avanzadas de PostgreSQL
 ## Ejercicio 1: Uso de JSON en la tabla jinetes
