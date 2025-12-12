@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Descriptivo</title>
+  <link rel="stylesheet" href="mystyle.css">
+
+  <style>
+    body {
+      background-image: url("iaw.jpg"); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<nav class="full-width-navbar">
+  <ul>
+    <li><a class="active" href="SAD.html">SAD</a></li>
+    <li><a class="active" href="PEP.html">PEP</a></li>
+    <li><a class="active" href="ASGBD.html">ASGBD</a></li>
+    <li><a class="active" href="index.html">Inicio</a></li>
+  </ul>
+</nav>
+
+<div class="contenedor-total">
+    
+    <div class="carousel">
+        
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="carousel-images">
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/EXTIAW.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Extensions</h2>
+                            </div>
+                            <p>This activity consists on prove some extra functions for update our programm, these improves are for some programming codes, for example php. This activity was easy to do it, some technical themes that I learnt like array.
+                              I think that these activities could not be better for learn it, so i put a 9.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/dados.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                         <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Craps</h2>
+                            </div>
+                            <p>This activity consist on design a board games with craps, first the player you have to choose the number of craps to one to three. Later, you have to select the number of faces that the craps that you select and later you decide the score that your enemy has. So with the number of craps multiply with the number of faces of the craps, you have to get more score. It was so difficult to do it, a lot of variables and the result was a lot of lines of code. 
+                              Some technician themes that I learned was intval or for sent dates to one page for other page, we use the Post method.
+                               I put this activity at 8, it's funny to do a game and design it.
+                              I would improve the form that i refer about all the possibilities, 
+                              The technician themes list:</p>
+                              <ul class="sub-list">
+                                <li>echo</li>
+                                <li>rand</li>
+                                <li>elseif</li>
+                                <li>array sum</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/ex_iaw.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Examen</h2>
+                            </div>
+                            <p>This activity consists on a game that you put your name and your surname, later appear on other page that ask you two numbers and later you play a game that if your score is over 3000 it says:Congratulations!!!
+
+                              These exam in my opinion it was hard and complicated because I couldn't finished. I put for the exam a 6.
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+</div> <script src="carrusel.js"></script>
+
+</body>
+</html>

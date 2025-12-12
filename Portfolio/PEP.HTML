@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Descriptivo</title>
+  <link rel="stylesheet" href="mystyle.css">
+
+  <style>
+    body {
+      background-image: url("iaw.jpg"); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<nav class="full-width-navbar">
+  <ul>
+    <li><a class="active" href="SAD.html">SAD</a></li>
+    <li><a class="active" href="IAW.html">IAW</a></li>
+    <li><a class="active" href="ASGBD.html">ASGBD</a></li>
+    <li><a class="active" href="index.html">Inicio</a></li>
+  </ul>
+</nav>
+
+<div class="contenedor-total">
+    
+    <div class="carousel">
+        
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="carousel-images">
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/EX_PEP.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Extensions</h2>
+                            </div>
+                            <p>This activity consists on prove some extra functions for update our program, these improves are for some programming codes, for example  php. This activity was easy to do it, some technical themes that I learnt like array.
+
+                                I think that these activities could not be better for learn it, so i put a 9.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/NAVARREDONDA.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                         <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Navarredonda</h2>
+                            </div>
+                            <p>This activity consists of doing a simulation of a web about the selling of tickets for an amusement park. It was not difficult to do it and I didn't spend a lot of time to did it. I put on these activities at 9.
+
+                                The technician themes list:
+                                </p>
+                              <ul class="sub-list">
+                                <li>elif</li>
+                                <li>print</li>
+                                <li>pyfliget</li>
+                                <li>input</li>
+                                <li>float</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/ex_iaw.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Purple</h2>
+                            </div>
+                            <p>This activity consists of designing the start of Lasalle with a tool called Purple, which lets you draw, with lines or circles.  In addition, you can give colour inside of the draw or you can change the color of the pen. I think that this activity is funny and entertaining,  also another part of the activity was to do a free painting, so you can express yourself, i give a valoration a 9.
+
+                                First, you write the code and when you finish,  there is a function that shows the paint that you describe.
+                                
+                                I learnt the commands randint which specifies the range of color from 0 to 255 and speed which lets you manage how fast your pen draws.
+                                
+                                The technician themes list:
+                                <ul class="sub-list">
+                                    <li>forward</li>
+                                    <li>endfill</li>
+                                    <li>done()</li>
+                                    <li>randint</li>
+                                    <li>range</li>
+                                  </ul>
+                                
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/ex_pep_1.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Exam Part 1</h2>
+                            </div>
+                            <p>This picture was the first question,  you had to paint a hot dog and the moment that you put extra mustard with his bottle. 
+                                It was hard, because it is a complex paint with a lot of commands and with the nervousness of the exam, is not my best paint. 
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/ex_pep_2.png.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Exam Part 2</h2>
+                            </div>
+                            <p>This was the second part of the exam, we had to design an order in a hot dog stand, with special rates and offers. 
+                                Depending on the number of customers, the size of the hot dog you can have discounts. This part was easier and faster to do it. 
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+</div> <script src="carrusel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Descriptivo</title>
+  <link rel="stylesheet" href="mystyle.css">
+
+  <style>
+    body {
+      background-image: url("iaw.jpg"); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<nav class="full-width-navbar">
+  <ul>
+    <li><a class="active" href="SAD.html">SAD</a></li>
+    <li><a class="active" href="IAW.html">PEP</a></li>
+    <li><a class="active" href="PEP.html">PEP</a></li>
+    <li><a class="active" href="index.html">Inicio</a></li>
+  </ul>
+</nav>
+
+<div class="contenedor-total">
+    
+    <div class="carousel">
+        
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="carousel-images">
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/sqlite.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>dBA_SQLITE</h2>
+                            </div>
+                            <p>This activity consists of making a database with the app that's called sqlite, with his tables and users and his respectful users and tables. 
+                                In addition, we had to make a backup of the database and enable the automatization of backups. And later answer a couple of questions without
+                                chatgpt related to the settings of the database. I give a mark of 6 because it's similar to the previous.
+
+                                I learnt the command “crontab -e” wich let you automatize the backups and create index which let you create an index with the most information 
+                                that users searched.
+                                
+                                The technician themes list:
+                                </p>
+                                <ul class="sub-list">
+                                    <li>Create index</li>
+                                    <li>crontab</li>
+                                    <li>Foreign Key</li>
+                                    <li>Integer</li>
+                                    <li>Pragma</li>
+                                  </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/Postgres.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                         <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>Postgres</h2>
+                            </div>
+                            <p>This activity consists of making a database with the app that's called PostgreSQL, with his tables and users and his respectful users and tables.
+                                 Normally we use the terminal with commands to make it. But  in this case, we also used the graphical interface, using a socket. 
+                                 And later we make tables with special columns using JSON and array, wich let you make more dates.
+
+                                I give a mark of 8 because we used a graphical view for making databases and I learnt how to do it. I learnt how to install the graphical interface and how to used it.
+                                
+                                The technician themes list
+                                </p>
+                              <ul class="sub-list">
+                                <li>JSON</li>
+                                <li>Set</li>
+                                <li>Values</li>
+                                <li>Inherits</li>
+                                <li>Array</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/users_mysql.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>USers mysql</h2>
+                            </div>
+                            <p>This activity consists of making a database with the app that's called mysql, first we had to create the tables and the users.
+                                  Later we did references between the tables, because they are relationated with his id. Although, With the users we have to 
+                                  grant permissions like select or update for let them make changes in the tables. These activity was entertaining and i valorated with a 8.
+
+                                I learnt the command “Flush Privileges” which you use when you make a change in the table of users, so the change is permanent and “Drop User” it is usually for deleting a user.. 
+                                
+                                The technician themes list:
+                                
+                                <ul class="sub-list">
+                                    <li>Grant</li>
+                                    <li>Select</li>
+                                    <li>Update</li>
+                                    <li>Revoke</li>
+                                    <li>Flsuh privileges</li>
+                                  </ul>
+                                
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-left">
+                        <img src="imagenes/explicacion.png" class="slide-img">
+                    </div>
+                    <div class="slide-right">
+                        <div class="text-description-wrapper"> 
+                            <div class="slide-header">
+                                <h2>dba_Mysql</h2>
+                            </div>
+                            <p>This activity consists of looking for the meaning of the settings for Databases, which let you adjust and change it. 
+                                In addition, it is important to know what do ever parameter, for adjust the database for the specifications of the customer. 
+                                It was a little complicated,  because i didn´t know any, so I had to make an effort to  learn it. I put these activity a 9,
+                                because now I know more about databases.
+
+                                The technician themes list:
+
+                                <ul class="sub-list">
+                                    <li>Max connections</li>
+                                    <li>Query cache file</li>
+                                    <li>Slow query log</li>
+                                    <li>long query time</li>
+                                    <li>table open cache</li>
+                                  </ul>
+                                
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+</div> <script src="carrusel.js"></script>
+
+</body>
+</html>
