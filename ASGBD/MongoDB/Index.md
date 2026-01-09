@@ -16,8 +16,12 @@
 ![alt text](image-10.png)
 # 2.Explica para MongoDB los siguientes puntos:
 ### 1.Modelo de datos basado en documentos
+https://www.purestorage.com/es/knowledge/what-is-mongodb.html
+
 ### 2.NoSQL
+https://www.mongodb.com/es/resources/basics/databases/nosql-explained
 ### 3.Escalabilidad horizontal
+https://lambdaloopers.com/blog/como-escalar-y-optimizar-una-base-de-datos-en-mongodb/
 ### 4.Consultas
 ### 5.Alta disponibilidad
 ### 6.Índices
@@ -54,23 +58,33 @@ Basándose en el esquema relacional anterior, se debe diseñar la estructura de 
 
 
 
-Esquema de la Base de Datos Relacional de un comercio
+# 2.Esquema de la Base de Datos Relacional de un comercio
 La base de datos relacional consta de las siguientes tablas:
 Tabla users
 user_id (PRIMARY KEY)
 name (TEXT)
 email (TEXT)
+
+![alt text](image-11.png)
 Tabla orders
 order_id (PRIMARY KEY)
 user_id (FOREIGN KEY)
 total (REAL)
+
+![alt text](image-12.png)
+
 Tabla products
 product_id (PRIMARY KEY)
 name (TEXT)
 price (REAL)
+
+![alt text](image-13.png)
+
 Tabla intermedia order_products
 order_id (FOREIGN KEY)
 product_id (FOREIGN KEY)
+
+![alt text](image-14.png)
 Datos de ejemplo:
 Tabla users:
 user_id
