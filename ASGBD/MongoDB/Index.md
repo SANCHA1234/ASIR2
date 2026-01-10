@@ -43,10 +43,15 @@ color (TEXT, NOT NULL): Color de la mandarina.
 tipo (TEXT, NOT NULL): Tipo de mandarina.
 size (TEXT, NOT NULL): Tamaño de la mandarina.
 fecha_recogida (DATE, NOT NULL): Fecha en la que se recogió la mandarina.
+
+![alt text](image-15.png)
+
 Melocotones:
 id_melocoton (INTEGER, PK, AUTOINCREMENT): Identificador único para cada melocotón.
 tipo (TEXT, NOT NULL): Tipo de melocotón.
 suavidad (BOOLEAN, NOT NULL): Indica si el melocotón es suave (1) o no (0).
+
+![alt text](image-16.png)
 Caquis:
 id_caqui (INTEGER, PK, AUTOINCREMENT): Identificador único para cada caqui.
 id_mandarina (INTEGER, FK, NOT NULL): Relacionado con id_mandarina en la tabla mandarinas.
@@ -54,9 +59,12 @@ id_melocoton (INTEGER, FK, NOT NULL): Relacionado con id_melocoton en la tabla m
 color (TEXT, NOT NULL): Color del caqui.
 pedunculo (BOOLEAN, NOT NULL): Indica si el caqui tiene pedúnculo (1) o no (0).
 tiempo_maduracion (INTEGER, NOT NULL): Tiempo de maduración en días.
-Basándose en el esquema relacional anterior, se debe diseñar la estructura de los documentos en MongoDB para cada colección que se considere necesaria para cubrir todos los datos que pueda albergar la base de datos.
 
+![alt text](image-17.png)
 
+Total de tablas:
+
+![alt text](image-18.png)
 
 # 2.Esquema de la Base de Datos Relacional de un comercio
 La base de datos relacional consta de las siguientes tablas:
@@ -141,6 +149,36 @@ product_id
 Diseño de Documentos en MongoDB
 Basándose en el esquema relacional anterior, se debe diseñar la estructura de los documentos en MongoDB para cada colección que se considere necesaria para cubrir todos los datos que pueda albergar la base de datos. Y teniendo en cuenta las relaciones y la  optimización de las consultas. Después de diseñar las colecciones, crear los documentos específicos para poder insertar exactamente los datos de los ejemplos anteriores.
 
+Tabla Mandarinas:
+
+![alt text](image-26.png)
+
+Tabla Melocotones:
+
+![alt text](image-25.png)
+
+Tabla caquis:
+
+![alt text](image-24.png)
+
+Tabla users:
+
+![alt text](image-23.png)
+
+Tabla Products:
+
+![alt text](image-22.png)
+
+Tabla Orders:
+
+![alt text](image-20.png)
+
+Tabla Orders_Products:
+
+![alt text](image-21.png)
+
+
+
 2) Creación de la Base de Datos y Inserción de Datos
 A. Utilizando la Terminal de mongo
 Crea una base de datos llamada mi_comercio
@@ -148,18 +186,46 @@ Crea las colecciones anteriores
 Inserta los documentos anteriores en las colecciones correspondientes.
 Realiza las siguientes consultas:
 Consulta 0: Lista todas la colecciones
+
+![alt text](image-27.png)
+
 Consulta 1: Listar todos los usuarios
+
+![alt text](image-28.png)
+
 Consulta 2: Buscar pedidos de un usuario cuyo id sea 1
+
+![alt text](image-29.png)
+
 Consulta 3: Listar productos con precio mayor a 30
+
+![alt text](image-30.png)
 Consulta 4: Buscar pedidos que contengan un producto con id = 2
+
+![alt text](image-31.png)
+
 Consulta 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
+
+![alt text](image-32.png) 
 Consulta 6: Mostrar solo los nombres y correos de los usuarios
+
+![alt text](image-33.png)
+
 Consulta 7: Contar cuántos productos tienen un precio menor o igual a 50
+
+![alt text](image-34.png)
+
 Consulta 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
+
+![alt text](image-35.png)
+
 Consulta 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
+
+![alt text](image-36.png)
+
 Consulta 10: Listar productos únicos comprados en todos los pedidos
 
-
+![alt text](image-37.png)
 B. Realiza lo mismo desde la interfaz gráfica MongoDB Compass creando una base de datos llamada mi_comercio2
 
 
