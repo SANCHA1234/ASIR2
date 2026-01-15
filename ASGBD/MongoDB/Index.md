@@ -63,7 +63,7 @@ La parte de find and modify query es que mientras se asigna el numero se para el
 
 ![alt text](image-64.png)
 
-Si quisieras empezar a contar desde otr número, simplemente en la imagen que muestro en el id que te interesa, cambias el 0 por el número al que quieres empezar a contar.
+Si quisieras empezar a contar desde otro número, simplemente en la imagen que muestro en el id que te interesa, cambias el 0 por el número al que quieres empezar a contar.
 
 - Mandarinas:id_mandarina (INTEGER, PK, AUTOINCREMENT),color (TEXT, NOT NULL),tipo (TEXT, NOT NULL)
 size (TEXT, NOT NULL),fecha_recogida (DATE, NOT NULL)
