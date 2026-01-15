@@ -5,7 +5,7 @@ Una base de datos orientada a documentos almacena datos en documentos similares 
 
 ## 2.NoSQL
 
-Significa que en lugar de guardar los datos en tablas como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos en documentos tipo JSON 
+Significa que en lugar de guardar los datos en tablas como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos en documentos tipo JSON. 
 
 ## 3.Escalabilidad horizontal
 
@@ -19,11 +19,11 @@ La aplicación permite hacer búsquedas de un sólo campo o varios, como puede s
 
 Además, permite limitar la búsquedad de resultados:
 
-![alt text](image-59.png)
+![alt text](image-57.png)
 
 O para buscar por cantidades si son mayores o menores, como:
 
-![alt text](image-60.png)
+![alt text](image-56.png)
 
 ## 5.Alta disponibilidad
 
@@ -33,9 +33,11 @@ Es la capacidad de que la base de datos permanezca accesible y funcional casi el
 
 MongoDB permite crear índices, para optimizar las búsquedas de información, como este ejemplo:
 
-![alt text](image-61.png)
+![alt text](image-59.png)
 
-![alt text](image-62.png)
+El resultado es el siguieten:
+
+![alt text](image-60.png)
 
 La primera línea indica que la colección fue creada manualmente con MongoDB create collection. La segunda línea muestra cuántos índices hay antes de que se ejecute el comando. La tercera línea muestra el número de índices después del comando, y la cuarta línea indica el éxito de la operación.
 
@@ -45,7 +47,7 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
 ## 8.Resumen con tus palabras de lo que te parece más interesante
      
-De todos los parámetros, el que más me ha llamado la atención es el de la escalabilidad horizonta, puesto que en lugar de darle más recursos aun servidor, añadiendo más servidores permite guardar más información, no tener dependencia sólo sobre un servidor y si se hace raid 1, otros servidores contienen la información en caso de que falle uno
+De todos los parámetros, el que más me ha llamado la atención es el de la escalabilidad horizonta, puesto que en lugar de darle más recursos aun servidor, añadiendo más servidores permite guardar más información, no tener dependencia sólo sobre un servidor y si se hace raid 1, otros servidores contienen la información en caso de que falle uno.
 
 # 2. Esquema de la Base de Datos Relacional de mandarinas
 
@@ -53,34 +55,33 @@ De todos los parámetros, el que más me ha llamado la atención es el de la esc
 
 ![alt text](image-9.png)
 
-Mandarinas:
-id_mandarina (INTEGER, PK, AUTOINCREMENT)
-color (TEXT, NOT NULL)
-tipo (TEXT, NOT NULL)
-size (TEXT, NOT NULL)
-fecha_recogida (DATE, NOT NULL)
+Para poder hacer que los valores id sean Autoincrement, tuve que crear una tabla con los id y función con javascript.
+
+![alt text](image-63.png)
+
+La parte de find and modify query es que mientras se asigna el numero se para el resto de operacion y no se asignes dos ID iguales, el query  para que busque el id, update lo actualiza y le suma +1 y el new:true es para que devuelva la bbdd actualizada y si es false, lo devuelve sin actualizar.
+
+![alt text](image-64.png)
+
+Si quisieras empezar a contar desde otr número, simplemente en la imagen que muestro en el id que te interesa, cambias el 0 por el número al que quieres empezar a contar.
+
+- Mandarinas:id_mandarina (INTEGER, PK, AUTOINCREMENT),color (TEXT, NOT NULL),tipo (TEXT, NOT NULL)
+size (TEXT, NOT NULL),fecha_recogida (DATE, NOT NULL)
 
 ![alt text](image-15.png)
 
-Melocotones:
-id_melocoton (INTEGER, PK, AUTOINCREMENT)
-tipo (TEXT, NOT NULL)
+- Melocotones: id_melocoton (INTEGER, PK, AUTOINCREMENT),tipo (TEXT, NOT NULL),
 suavidad (BOOLEAN, NOT NULL)
 
 ![alt text](image-16.png)
 
 
-Caquis:
-id_caqui (INTEGER, PK, AUTOINCREMENT)
-id_mandarina (INTEGER, FK, NOT NULL)
-id_melocoton (INTEGER, FK, NOT NULL)
-color (TEXT, NOT NULL)
-pedunculo (BOOLEAN, NOT NULL)
-tiempo_maduracion (INTEGER, NOT NULL)
+- Caquis:id_caqui (INTEGER, PK, AUTOINCREMENT),id_mandarina (INTEGER, FK, NOT NULL),id_melocoton (INTEGER, FK, NOT NULL),color (TEXT, NOT NULL)
+pedunculo (BOOLEAN, NOT NULL),tiempo_maduracion (INTEGER, NOT NULL)
 
 ![alt text](image-17.png)
 
-Total de tablas:
+- Total de tablas:
 
 ![alt text](image-18.png)
 
@@ -88,30 +89,19 @@ Total de tablas:
 
 La base de datos relacional consta de las siguientes tablas:
 
-Tabla users
-user_id (PRIMARY KEY)
-name (TEXT)
-email (TEXT)
+- Tabla users:user_id (PRIMARY KEY),name (TEXT),email (TEXT)
 
 ![alt text](image-11.png)
 
-Tabla orders
-order_id (PRIMARY KEY)
-user_id (FOREIGN KEY)
-total (REAL)
+- Tabla orders:order_id (PRIMARY KEY),user_id (FOREIGN KEY),total (REAL)
 
-![alt text](image-57.png)
+![alt text](image-61.png)
 
-Tabla products
-product_id (PRIMARY KEY)
-name (TEXT)
-price (REAL)
+- Tabla products:product_id (PRIMARY KEY),name (TEXT),price (REAL)
 
 ![alt text](image-13.png)
 
-Tabla intermedia order_products
-order_id (FOREIGN KEY)
-product_id (FOREIGN KEY)
+- Tabla intermedia order_products:order_id (FOREIGN KEY),product_id (FOREIGN KEY)
 
 ![alt text](image-14.png)
 
@@ -168,7 +158,7 @@ product_id (FOREIGN KEY)
 ![alt text](image-30.png)
 ### 4: Buscar pedidos que contengan un producto con id = 2
 
-![alt text](image-56.png)
+![alt text](image-62.png)
 
 ### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
 
@@ -210,7 +200,7 @@ Para crear las tablas de forma gráfica, desde la BBDD de mandarinas y de comerc
 ![alt text](image-45.png)
 
 
-Por otro lado, para el tema de los filtros, existe una terminal en la plataforma, por lo que he utilizado los mismos filtros para hacer las búsquedas
+Por otro lado, para el tema de los filtros, existe una terminal en la plataforma, por lo que he utilizado los mismos filtros para hacer las búsquedas.
 
 ### 0: Lista todas la colecciones
 
@@ -259,7 +249,7 @@ Por otro lado, para el tema de los filtros, existe una terminal en la plataforma
 
 ![alt text](image-55.png)
 
-# 3.Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
+# 3. Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
 
 Después de haber trabajado con ambas opciones, he ahorrado tiempo de la forma gráfica puesto que ya estaban hechas las tablas desde el terminal y sólo he tenido que importarlas. No obstante, después de estar navegando por la aplicación no encontré ninguna otra forma de subir las tablas que no fuera a comando, por lo que en ese aspecto, prefiero el terminal.
 
