@@ -1,64 +1,82 @@
-# 1. Instala en Docker la última versión Mongo DB oficial.
+# 1.Explica para MongoDB los siguientes puntos:
+## 1.Modelo de datos basado en documentos
 
-![](image.png)
+Una base de datos orientada a documentos almacena datos en documentos similares a los objetos JSON (JavaScript Object Notation). Cada documento contiene pares de campos y valores. Por lo general, los valores pueden ser de una variedad de tipos, entre ellos, strings, números, operadores booleanos, arreglos o, incluso, otros objetos. 
 
-![](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+## 2.NoSQL
 
-![alt text](image-4.png)
+Significa que en lugar de guardar los datos en tablas como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos en documentos tipo JSON 
 
-![alt text](image-5.png) 
-![alt text](image-6.png)
+## 3.Escalabilidad horizontal
 
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-10.png)
-# 2.Explica para MongoDB los siguientes puntos:
-### 1.Modelo de datos basado en documentos
-https://www.purestorage.com/es/knowledge/what-is-mongodb.html
+Implica añadir más máquinas para distribuir mejor la carga de la base de datos y aumentar la capacidad general de almacenamiento o procesamiento. Existen dos métodos comunes para realizar el escalamiento horizontal: la fragmentación, que aumenta la capacidad general del sistema, y ​​la replicación, que aumenta la disponibilidad y la fiabilidad del sistema.
 
-### 2.NoSQL
-https://www.mongodb.com/es/resources/basics/databases/nosql-explained
-### 3.Escalabilidad horizontal
-https://lambdaloopers.com/blog/como-escalar-y-optimizar-una-base-de-datos-en-mongodb/
-### 4.Consultas
-### 5.Alta disponibilidad
-### 6.Índices
-### 7.Agregaciones
-### 8.Resumen con tus palabras de lo que te parece más interesante
-     3)  Haz commit en cada clase con el comentario: [clase] 'tarea realizada'
-Lo que trabajes en casa haz commit al terminar con el comentario: [casa] 'tarea realizada'
-Rellena el portfolio con tu feedback del desafío.
+## 4.Consultas
 
+La aplicación permite hacer búsquedas de un sólo campo o varios, como puede ser:
 
-0) Esquema de la Base de Datos Relacional de mandarinas
+![alt text](image-58.png)
+
+Además, permite limitar la búsquedad de resultados:
+
+![alt text](image-59.png)
+
+O para buscar por cantidades si son mayores o menores, como:
+
+![alt text](image-60.png)
+
+## 5.Alta disponibilidad
+
+Es la capacidad de que la base de datos permanezca accesible y funcional casi el 100% del tiempo, incluso ante fallos de hardware o mantenimiento, lograda principalmente mediante Conjuntos de Réplicas (Replica Sets), que son grupos de servidores que replican datos para crear redundancia y habilitan la conmutación por error automática si el nodo principal falla, asegurando continuidad operativa y protección contra pérdida de datos. 
+
+## 6.Índices
+
+MongoDB permite crear índices, para optimizar las búsquedas de información, como este ejemplo:
+
+![alt text](image-61.png)
+
+![alt text](image-62.png)
+
+La primera línea indica que la colección fue creada manualmente con MongoDB create collection. La segunda línea muestra cuántos índices hay antes de que se ejecute el comando. La tercera línea muestra el número de índices después del comando, y la cuarta línea indica el éxito de la operación.
+
+## 7.Agregaciones
+
+La agregación consiste en reunir datos existentes de múltiples fuentes y expresarlos en una forma nueva y resumida, ya sea una suma o un recuento.
+
+## 8.Resumen con tus palabras de lo que te parece más interesante
+     
+De todos los parámetros, el que más me ha llamado la atención es el de la escalabilidad horizonta, puesto que en lugar de darle más recursos aun servidor, añadiendo más servidores permite guardar más información, no tener dependencia sólo sobre un servidor y si se hace raid 1, otros servidores contienen la información en caso de que falle uno
+
+# 2. Esquema de la Base de Datos Relacional de mandarinas
 
 ## 1. Creamos la base de datos Mandarinas
 
 ![alt text](image-9.png)
+
 Mandarinas:
-id_mandarina (INTEGER, PK, AUTOINCREMENT): Identificador único para cada mandarina.
-color (TEXT, NOT NULL): Color de la mandarina.
-tipo (TEXT, NOT NULL): Tipo de mandarina.
-size (TEXT, NOT NULL): Tamaño de la mandarina.
-fecha_recogida (DATE, NOT NULL): Fecha en la que se recogió la mandarina.
+id_mandarina (INTEGER, PK, AUTOINCREMENT)
+color (TEXT, NOT NULL)
+tipo (TEXT, NOT NULL)
+size (TEXT, NOT NULL)
+fecha_recogida (DATE, NOT NULL)
 
 ![alt text](image-15.png)
 
 Melocotones:
-id_melocoton (INTEGER, PK, AUTOINCREMENT): Identificador único para cada melocotón.
-tipo (TEXT, NOT NULL): Tipo de melocotón.
-suavidad (BOOLEAN, NOT NULL): Indica si el melocotón es suave (1) o no (0).
+id_melocoton (INTEGER, PK, AUTOINCREMENT)
+tipo (TEXT, NOT NULL)
+suavidad (BOOLEAN, NOT NULL)
 
 ![alt text](image-16.png)
+
+
 Caquis:
-id_caqui (INTEGER, PK, AUTOINCREMENT): Identificador único para cada caqui.
-id_mandarina (INTEGER, FK, NOT NULL): Relacionado con id_mandarina en la tabla mandarinas.
-id_melocoton (INTEGER, FK, NOT NULL): Relacionado con id_melocoton en la tabla melocotones.
-color (TEXT, NOT NULL): Color del caqui.
-pedunculo (BOOLEAN, NOT NULL): Indica si el caqui tiene pedúnculo (1) o no (0).
-tiempo_maduracion (INTEGER, NOT NULL): Tiempo de maduración en días.
+id_caqui (INTEGER, PK, AUTOINCREMENT)
+id_mandarina (INTEGER, FK, NOT NULL)
+id_melocoton (INTEGER, FK, NOT NULL)
+color (TEXT, NOT NULL)
+pedunculo (BOOLEAN, NOT NULL)
+tiempo_maduracion (INTEGER, NOT NULL)
 
 ![alt text](image-17.png)
 
@@ -67,6 +85,7 @@ Total de tablas:
 ![alt text](image-18.png)
 
 # 2.Esquema de la Base de Datos Relacional de un comercio
+
 La base de datos relacional consta de las siguientes tablas:
 
 Tabla users
@@ -81,7 +100,7 @@ order_id (PRIMARY KEY)
 user_id (FOREIGN KEY)
 total (REAL)
 
-![alt text](image-12.png)
+![alt text](image-57.png)
 
 Tabla products
 product_id (PRIMARY KEY)
@@ -96,94 +115,42 @@ product_id (FOREIGN KEY)
 
 ![alt text](image-14.png)
 
-Datos de ejemplo:
-Tabla users:
 
-user_id name email 
-1 Alice alice@example.com
+# 2. Creación de la Base de Datos y Inserción de Datos
 
-2 Bob bob@example.com
-
-Tabla orders:
-order_id
-user_id
-total
-1
-1
-50.00
-2
-1
-30.00
-3
-2
-20.00
-
-Tabla products:
-product_id
-name
-price
-1
-Laptop
-1000
-2
-Mouse
-20
-3
-Keyboard
-50
-
-Tabla order_products:
-order_id
-product_id
-1
-1
-1
-2
-2
-3
-3
-2
+## 1. Utilizando la Terminal de mongo, crea una base de datos llamada mi_comercio
 
 
-Diseño de Documentos en MongoDB
-Basándose en el esquema relacional anterior, se debe diseñar la estructura de los documentos en MongoDB para cada colección que se considere necesaria para cubrir todos los datos que pueda albergar la base de datos. Y teniendo en cuenta las relaciones y la  optimización de las consultas. Después de diseñar las colecciones, crear los documentos específicos para poder insertar exactamente los datos de los ejemplos anteriores.
-
-Tabla Mandarinas:
+### Tabla Mandarinas:
 
 ![alt text](image-26.png)
 
-Tabla Melocotones:
+### Tabla Melocotones:
 
 ![alt text](image-25.png)
 
-Tabla caquis:
+### Tabla caquis:
 
 ![alt text](image-24.png)
 
-Tabla users:
+### Tabla users:
 
 ![alt text](image-23.png)
 
-Tabla Products:
+### Tabla Products:
 
 ![alt text](image-22.png)
 
-Tabla Orders:
+### Tabla Orders:
 
 ![alt text](image-20.png)
 
-Tabla Orders_Products:
+### Tabla Orders_Products:
 
 ![alt text](image-21.png)
 
+## 2. Realiza las siguientes consultas:
 
-
-2) Creación de la Base de Datos y Inserción de Datos
-A. Utilizando la Terminal de mongo
-Crea una base de datos llamada mi_comercio
-Crea las colecciones anteriores
-Inserta los documentos anteriores en las colecciones correspondientes.
-Realiza las siguientes consultas:
 ### 0: Lista todas la colecciones
 
 ![alt text](image-27.png)
@@ -201,7 +168,7 @@ Realiza las siguientes consultas:
 ![alt text](image-30.png)
 ### 4: Buscar pedidos que contengan un producto con id = 2
 
-![alt text](image-31.png)
+![alt text](image-56.png)
 
 ### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
 
@@ -226,12 +193,9 @@ Realiza las siguientes consultas:
 
 ![alt text](image-37.png)
 
-B. Realiza lo mismo desde la interfaz gráfica MongoDB Compass creando una base de datos llamada mi_comercio2
+## 2. Realiza lo mismo desde la interfaz gráfica MongoDB Compass creando una base de datos llamada mi_comercio2
 
-Para poder utilizar MongoDB Compass hay que habilitar el docker de mongoDB y pegar el link que te aparece al encender por terminal MongoDB, Cuando se conecta, te muestra todas las BBDD creadas con sus tablas. 
-
-
-Por lo que una para crear las tablas de forma gráfica, desde la BBDD de mandarinas y de comercio permite exportar sus tablas en formato de JSON, de esta forma, al crear la BBDD de micomercio_2, deja importar las tablas que se han exportado anteriormente. 
+Para crear las tablas de forma gráfica, desde la BBDD de mandarinas y de comercio permite exportar sus tablas en formato de JSON, de esta forma, al crear la BBDD de micomercio_2, deja importar las tablas que se han exportado anteriormente. 
 
 ![alt text](image-46.png)
 
@@ -295,10 +259,23 @@ Por otro lado, para el tema de los filtros, existe una terminal en la plataforma
 
 ![alt text](image-55.png)
 
-3) Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
+# 3.Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
 
 Después de haber trabajado con ambas opciones, he ahorrado tiempo de la forma gráfica puesto que ya estaban hechas las tablas desde el terminal y sólo he tenido que importarlas. No obstante, después de estar navegando por la aplicación no encontré ninguna otra forma de subir las tablas que no fuera a comando, por lo que en ese aspecto, prefiero el terminal.
 
 Y a la hora de filtrar, también había que hacerlo a comando porque no hay otra forma y tienes que saber los filtros, por lo que en mi opinión no ofrece ninguna ventaja en cuanto al ahorro de tiempo para hacer los filtros.
 
 Mi conclusión final es que no he notado ninguna ventaja a la hora de utilizar el MongoDB Compass con respecto al terminal, por lo que me parece más útil el terminal, no me ha dado problemas y para utilizar el método gráfico, necesitas habilitar el docker, por lo que tienes que usar terminal igualmente.
+
+## 4. Bibliografía
+
+- https://www.purestorage.com/es/knowledge/what-is-mongodb.html[Modelo_de_datos_basado_en_documentos]
+- https://mappinggis.com/2014/07/mongodb-y-gis/#:~:text=Vamos%20a%20empezar%20por%20el,de%20un%20JSON%20como%20almacenamiento.&text=%C2%BFC%C3%B3mo%20se%20realiza%20una%20consulta,%C2%BFQui%C3%A9n%20usa%20MongoDB?[NoSQL]
+- https://www.mongodb.com/resources/basics/horizontal-vs-vertical-scaling[Escalabilidad_Horizontal]
+- https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/mongodb-queries/[Búsquedas]
+- https://www.mongodb.com/resources/basics/high-availability[Alta_Disponibilidad]
+- https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/mongodb-create-index/[Índices]
+- https://studio3t.com/es/mongodb-tools/aggregation-editor/#:~:text=La%20agregaci%C3%B3n%20consiste%20en%20reunir,una%20suma%20o%20un%20recuento.[Agregaciones]
+
+
+  
