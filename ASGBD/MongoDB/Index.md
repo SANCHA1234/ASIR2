@@ -68,6 +68,7 @@ Total de tablas:
 
 # 2.Esquema de la Base de Datos Relacional de un comercio
 La base de datos relacional consta de las siguientes tablas:
+
 Tabla users
 user_id (PRIMARY KEY)
 name (TEXT)
@@ -97,8 +98,10 @@ product_id (FOREIGN KEY)
 
 Datos de ejemplo:
 Tabla users:
+
 user_id name email 
 1 Alice alice@example.com
+
 2 Bob bob@example.com
 
 Tabla orders:
@@ -267,22 +270,35 @@ Por otro lado, para el tema de los filtros, existe una terminal en la plataforma
 
 ### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
 
+![alt text](image-49.png)
 
 ### 6: Mostrar solo los nombres y correos de los usuarios
 
-
+![alt text](image-50.png)
 
 ### 7: Contar cuántos productos tienen un precio menor o igual a 50
 
-
+![alt text](image-51.png)
 
 ### 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
+
+![alt text](image-52.png)
+
+![alt text](image-53.png)
 
 
 ### 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
 
-
+![alt text](image-54.png)
 
 ### 10: Listar productos únicos comprados en todos los pedidos
 
+![alt text](image-55.png)
+
 3) Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
+
+Después de haber trabajado con ambas opciones, he ahorrado tiempo de la forma gráfica puesto que ya estaban hechas las tablas desde el terminal y sólo he tenido que importarlas. No obstante, después de estar navegando por la aplicación no encontré ninguna otra forma de subir las tablas que no fuera a comando, por lo que en ese aspecto, prefiero el terminal.
+
+Y a la hora de filtrar, también había que hacerlo a comando porque no hay otra forma y tienes que saber los filtros, por lo que en mi opinión no ofrece ninguna ventaja en cuanto al ahorro de tiempo para hacer los filtros.
+
+Mi conclusión final es que no he notado ninguna ventaja a la hora de utilizar el MongoDB Compass con respecto al terminal, por lo que me parece más útil el terminal, no me ha dado problemas y para utilizar el método gráfico, necesitas habilitar el docker, por lo que tienes que usar terminal igualmente.
