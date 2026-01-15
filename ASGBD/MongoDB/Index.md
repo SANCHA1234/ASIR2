@@ -74,6 +74,7 @@ name (TEXT)
 email (TEXT)
 
 ![alt text](image-11.png)
+
 Tabla orders
 order_id (PRIMARY KEY)
 user_id (FOREIGN KEY)
@@ -93,17 +94,12 @@ order_id (FOREIGN KEY)
 product_id (FOREIGN KEY)
 
 ![alt text](image-14.png)
+
 Datos de ejemplo:
 Tabla users:
-user_id
-name
-email
-1
-Alice
-alice@example.com
-2
-Bob
-bob@example.com
+user_id name email 
+1 Alice alice@example.com
+2 Bob bob@example.com
 
 Tabla orders:
 order_id
@@ -185,50 +181,108 @@ Crea una base de datos llamada mi_comercio
 Crea las colecciones anteriores
 Inserta los documentos anteriores en las colecciones correspondientes.
 Realiza las siguientes consultas:
-Consulta 0: Lista todas la colecciones
+### 0: Lista todas la colecciones
 
 ![alt text](image-27.png)
 
-Consulta 1: Listar todos los usuarios
+### 1: Listar todos los usuarios
 
 ![alt text](image-28.png)
 
-Consulta 2: Buscar pedidos de un usuario cuyo id sea 1
+### 2: Buscar pedidos de un usuario cuyo id sea 1
 
 ![alt text](image-29.png)
 
-Consulta 3: Listar productos con precio mayor a 30
+### 3: Listar productos con precio mayor a 30
 
 ![alt text](image-30.png)
-Consulta 4: Buscar pedidos que contengan un producto con id = 2
+### 4: Buscar pedidos que contengan un producto con id = 2
 
 ![alt text](image-31.png)
 
-Consulta 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
+### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
 
 ![alt text](image-32.png) 
-Consulta 6: Mostrar solo los nombres y correos de los usuarios
+### 6: Mostrar solo los nombres y correos de los usuarios
 
 ![alt text](image-33.png)
 
-Consulta 7: Contar cuántos productos tienen un precio menor o igual a 50
+### 7: Contar cuántos productos tienen un precio menor o igual a 50
 
 ![alt text](image-34.png)
 
-Consulta 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
+### 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
 
 ![alt text](image-35.png)
 
-Consulta 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
+### 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
 
 ![alt text](image-36.png)
 
-Consulta 10: Listar productos únicos comprados en todos los pedidos
+### 10: Listar productos únicos comprados en todos los pedidos
 
 ![alt text](image-37.png)
+
 B. Realiza lo mismo desde la interfaz gráfica MongoDB Compass creando una base de datos llamada mi_comercio2
 
+Para poder utilizar MongoDB Compass hay que habilitar el docker de mongoDB y pegar el link que te aparece al encender por terminal MongoDB, Cuando se conecta, te muestra todas las BBDD creadas con sus tablas. 
 
 
+Por lo que una para crear las tablas de forma gráfica, desde la BBDD de mandarinas y de comercio permite exportar sus tablas en formato de JSON, de esta forma, al crear la BBDD de micomercio_2, deja importar las tablas que se han exportado anteriormente. 
+
+![alt text](image-46.png)
+
+![alt text](image-47.png)
+
+![alt text](image-42.png)
+
+![alt text](image-43.png)
+
+![alt text](image-44.png)
+
+![alt text](image-45.png)
+
+
+Por otro lado, para el tema de los filtros, existe una terminal en la plataforma, por lo que he utilizado los mismos filtros para hacer las búsquedas
+
+### 0: Lista todas la colecciones
+
+![alt text](image-39.png)
+
+### 1: Listar todos los usuarios
+
+![alt text](image-38.png)
+
+### 2: Buscar pedidos de un usuario cuyo id sea 1
+
+![alt text](image-40.png)
+
+### 3: Listar productos con precio mayor a 30
+
+![alt text](image-41.png)
+
+### 4: Buscar pedidos que contengan un producto con id = 2
+
+![alt text](image-48.png)
+
+### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
+
+
+### 6: Mostrar solo los nombres y correos de los usuarios
+
+
+
+### 7: Contar cuántos productos tienen un precio menor o igual a 50
+
+
+
+### 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
+
+
+### 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
+
+
+
+### 10: Listar productos únicos comprados en todos los pedidos
 
 3) Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
