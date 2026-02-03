@@ -1,15 +1,11 @@
-# Estudio y análisis de servidores VPN y PROXY, FIREWALL Y DMZ
-
 ## 1. Índice
 
-1. VPN
-2. Firewall
-3. Servidor Proxy
-4. DMZ
-5. Link presentación
-6. Bibliografía
-
-
+1. [VPN](#vpn)
+2. [Firewall](#firewall)
+3. [Servidor Proxy](#proxy)
+4. [DMZ](#estudio-dmz)
+5. [Link presentación](#link-de-la-presentacion)
+6. [Bibliografía](#bibiliografia)
 
 # VPN
 
@@ -66,8 +62,8 @@ Esto garantiza que la actividad en línea esté protegida y sea privada y más s
 4. Enmascaramiento de IP: El servidor VPN recibe tus datos, los descifra y los envía a la página web o servicio que quieres visitar, pero usando su propia dirección IP, no la tuya.
 5. Respuestas: La respuesta del sitio web vuelve al servidor VPN, que la cifra y te la envía de vuelta por el túnel seguro para que tu dispositivo la descifre. 
 
+![alt text](image-3.png)
 
-![alt text](image-2.png)
 
 ### Protocolos
 - OpenVPN:
@@ -91,9 +87,9 @@ Los firewalls vienen en formas de hardware y software, y funcionan inspeccionand
 
 Por lo tanto, los firewalls regulan el tráfico entrante y saliente, protegiendo la red de:
 
-- Amenazas externas: como virus, puertas traseras, correos electrónicos de suplantación de identidad y ataques de denegación de servicio (DoS). Los firewalls filtran los flujos de tráfico entrantes, evitando el acceso no autorizado a datos sensibles y frustrando posibles infecciones de malware.
+Amenazas externas: como virus, puertas traseras, correos electrónicos de suplantación de identidad y ataques de denegación de servicio (DoS). Los firewalls filtran los flujos de tráfico entrantes, evitando el acceso no autorizado a datos sensibles y frustrando posibles infecciones de malware.
 
-- Amenazas internas: como actores maliciosos conocidos o aplicaciones riesgosas. Un firewall puede aplicar reglas y políticas para restringir ciertos tipos de tráfico saliente, lo que ayuda a identificar actividades sospechosas y mitigar la exfiltración de datos.
+Amenazas internas: como actores maliciosos conocidos o aplicaciones riesgosas. Un firewall puede aplicar reglas y políticas para restringir ciertos tipos de tráfico saliente, lo que ayuda a identificar actividades sospechosas y mitigar la exfiltración de datos.
 
 Existieron 4 generaciones de firewalls
 
@@ -104,7 +100,61 @@ Existieron 4 generaciones de firewalls
 3ª Generación - Proxy (Aplicación) Actúan como intermediarios entre cliente y servidor, filtrando respuestas completas.
 
 4ª Generación (2010) - NGFW (Next-Gen) Combinan lo anterior con IPS (Prevención de Intrusiones), control de aplicaciones y detección de amenazas avanzadas.
+
+### Ventajas
+
+- Seguridad de red mejorada:
+
+    Un cortafuegos desempeña un papel vital para evitar que los paquetes dañinos lleguen A su red, manteniendo su información confidencial e infraestructura A salvo de posibles peligros. Al examinar y filtrar el tráfico entrante y saliente, actúa como una barrera contra los intentos no autorizados para acceder a su sistema, como la piratería informática o la violación de datos.   
+
+- Protección para múltiples sistemas:
+
+    Los cortafuegos basados en red, como los routers, proporcionan la ventaja de proteger varios sistemas al mismo tiempo. Este enfoque centralizado ofrece comodidad y escalabilidad, especialmente para empresas con múltiples dispositivos conectados ala red.
+
+### Desventajas
+
+- Impacto en el rendimiento:
+
+    Los cortafuegos de Software que realizan filtrado de paquetes tienen el potencial de afectar el rendimiento del sistema ya que analizan cada paquete de datos. Esta tarea exigente puede resultar en una red más lenta o mayor retraso. Por otro lado, los firewalls de hardware alivian este problema mediante la transferencia del proceso de filtrado al hardware dedicado, lo que garantiza un rendimiento óptimo de la red.
+
+- La complejidad del mantenimiento:
+
+    Configurar y mantener un cortafuegos puede ser una tarea complicada, especialmente para personas sin experiencia técnica. Requiere un monitoreo continuo, actualización y reglas de administración para asegurar que el cortafuegos permanezca efectivo contra nuevas amenazas. Un cortafuegos mal configurado o mal mantenido puede crear vulnerabilidades, lo que puede conducir A violaciones de seguridad.
+
+    ![alt text](image-2.png)
+
+
+# Estudio DMZ
  
+Una DMZ  o zona desmilitarizada es una red perimetral que protege y agrega una capa adicional de seguridad a la red de área local interna de una organización del tráfico no confiable. El objetivo final de una red de zona desmilitarizada es permitir que una organización acceda a redes no confiables, como Internet, mientras garantiza que su red privada o LAN permanezca segura. Este tipo de herramientas pueden ser tanto dispositivos específicos dedicados, o software, como el integrado por defecto en el sistema operativo Windows o OS X. 
+
+Los dispositivos dedicados, por lo general, cuentan con más capacidades de procesamiento que los basados en software, ya que se han diseñado específicamente para esa tarea, aunque por el contrario, su coste económico es superior. Normalmete se implementan en servidores web, servidores DNS, servidor de correo y servidores FTP.
+
+### Ventajas de una DMZ
+
+- Aumento de la Seguridad: 
+
+    Aísla los servicios públicos del resto de la red, reduciendo el riesgo de que una vulnerabilidad en uno de estos servicios exponga la red interna.
+
+- Mitigación de Ataques: 
+
+    Proporciona un área controlada donde los atacantes pueden ser detectados y mitigados antes de que puedan acceder a datos más sensibles en la red interna.
+
+- Facilita el Cumplimiento:
+
+    Muchas normativas de seguridad recomiendan o requieren el uso de una DMZ para proteger datos sensibles y cumplir con los estándares de seguridad.
+
+### Desventajas de una DMZ
+
+- Complejidad de Implementación:
+
+    Configurar y mantener una DMZ requiere una planificación cuidadosa y recursos adicionales.
+
+- Costos:
+ 
+    Implementar una DMZ puede incrementar los costos debido a la necesidad de hardware adicional (firewalls, servidores) y personal especializado para gestionar la infraestructura.
+
+![alt text](image-1.png)
 
 # Proxy
 
@@ -115,18 +165,24 @@ Un servidor proxy es un servidor intermediario que se encuentra entre un cliente
 ### Tipos: 
 
 - Forward Proxy
-El más común. Se sitúa delante de los clientes y se usa para pasar las solicitudes a internet.
+    
+    El más común. Se sitúa delante de los clientes y se usa para pasar las solicitudes a internet.
 
 - Reverse Proxy
-Se sitúa delante de los servidores web. Se usa para proteger al servidor, equilibrar la carga de tráfico y mejorar la velocidad.
+    
+    Se sitúa delante de los servidores web. Se usa para proteger al servidor, equilibrar la carga de tráfico y mejorar la velocidad.
+
 - Proxy Anónimo
-Oculta tu dirección IP original para que el sitio web no sepa quién eres, aunque el sitio sabe que estás usando un proxy.
+    
+    Oculta tu dirección IP original para que el sitio web no sepa quién eres, aunque el sitio sabe que estás usando un proxy.
 
 - Proxy Transparente
-No oculta ninguna información. Se suele usar en empresas o escuelas para filtrar contenido o autenticar usuarios.
+    
+    No oculta ninguna información. Se suele usar en empresas o escuelas para filtrar contenido o autenticar usuarios.
 
 - Proxy de Alta Anonimidad
-Cambia periódicamente la IP que presenta al sitio web y oculta que es un proxy, siendo el más difícil de rastrear.
+    
+    Cambia periódicamente la IP que presenta al sitio web y oculta que es un proxy, siendo el más difícil de rastrear.
 
 
 ### Funcionamiento
@@ -137,6 +193,8 @@ El proceso es el siguiente:
 2. El proxy la recibe, la procesa (puede cambiar tu dirección IP) y la envía al sitio web.
 3. El sitio web responde al proxy.
 4. El proxy te devuelve la información a ti.
+
+![alt text](image-4.png)
 
 ### Ventajas
 
@@ -174,9 +232,8 @@ El proceso es el siguiente:
 
     Aunque el proxy oculte tu IP, los sitios web aún pueden identificarte mediante cookies o fingerprinting (huella digital del navegador). El proxy por sí solo no garantiza un anonimato total si no limpias tus datos de navegación.
 
-# Arquitectura de red
 
-![alt text](image.png)
+# Arquitectura de red
 
 En la red se observa, el firewall que cumple la función de vigilar los paquetes de todas las redes que están involucradas: Como la red interna de la DMZ; la de la VPN; la del proxy y la de internet que entra. Además bloquea el acceso a la dmz desde internet para evitar cualquier tipo de ataque, por eso sólo se puede acceder desde fuera a través de la VPN.
 
@@ -186,14 +243,20 @@ Además, en la zona DMZ, se encuentran los servidores principales, como el DNS, 
 
 Y el servidor proxy, se encarga de Controlar el acceso a Internet bloquear páginas o servicios no autorizados,registrar qué usuarios acceden a qué sitios,detectan tráfico sospechoso,bloquean tanto malware, anuncios o descargas peligrosas. El proxy puede guardar copias de: Páginas web y archivos frecuentes.
 
-# Link de la presentacion
+![alt text](image-5.png)
 
-- https://www.canva.com/design/DAG-fHdUX8o/fsLCKNguZGL9a53CvBEeUA/edit?utm_content=DAG-fHdUX8o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+# Link de la presentación
 
+- [Enlace_a_canva](https://www.canva.com/design/DAG-fHdUX8o/fsLCKNguZGL9a53CvBEeUA/edit?utm_content=DAG-fHdUX8o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
- # Bibiliografia
+ 
+ # Bibiliografía
+- [Firewall](https://www.fortinet.com/lat/resources/cyberglossary/firewall)
+- [vpn](https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-vpn) 
+- [servidor_proxy](https://brightdata.es/blog/101-proxy/what-is-proxy-server) 
+- [Funcionamiento_ VPN](https://www.kaspersky.es/resource-center/definitions/what-is-a-vpn)
+- [firewall_2](https://www.fortinet.com/lat/resources/cyberglossary/firewall)
+- [DMZ](https://www.fortinet.com/lat/resources/cyberglossary/what-is-dmz)
+- [DMZ_2](https://www.incibe.es/empresas/blog/dmz-y-te-puede-ayudar-proteger-tu-empresa)
+- [Ventajas_y_desventajas_firewall](https://es.hi-network.com/what-are-the-advantages-and-disadvantages-of-using-a-firewall.html)
 
- - https://www.fortinet.com/lat/resources/cyberglossary/firewall
- - https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-vpn [Servidor_VPN]
- - https://brightdata.es/blog/101-proxy/what-is-proxy-server [Servidor_Proxy]
- - https://www.kaspersky.es/resource-center/definitions/what-is-a-vpn[Funcionamiento_VPN]
