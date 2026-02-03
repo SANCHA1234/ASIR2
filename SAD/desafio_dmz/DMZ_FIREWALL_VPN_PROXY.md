@@ -110,16 +110,9 @@ Outbound NAT: Automático.
 ![alt text](image-14.png)
 
 #### 3. Cliente Interno
-Configuración General
-Nombre de la máquina: Cliente Interno
-RAM: ? GB
-CPU: 1 vCPU
-Disco duro: ? GB (Dinámicamente asignado)
-Sistema operativo: Windows 7/10/11.
-Configuración de Red
-Adaptador 1 (LAN):
-Tipo: Red Interna
-Nombre de la red interna: LAN
+
+
+![alt text](image-24.png)
 
 
 Pruebas de conectividad
