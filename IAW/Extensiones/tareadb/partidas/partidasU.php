@@ -1,7 +1,7 @@
 <?php
 require_once("dbutils.php");
 $conexion = conectarDB();
-
+ 
 if($_POST){
     $query="UPDATE Players SET Valoracion=:Valoracion WHERE ID=:ID";
     realizarQuery($conexion,$query,[
