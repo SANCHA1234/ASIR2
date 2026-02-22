@@ -1,151 +1,123 @@
-Acceder al cliente de Redis:
 
-redis-cli
+# Redis
 
-Probar un comando básico:
+## Parte 1: Comandos básicos en Redis
 
-PING Debería responder con PONG.
+### Claves
+1. Establecer y obtener el valor de una clave
 
-Especificar una base de datos (por defecto usa la 0) 
-
-redis-cli -n 1
-
-Parte 1: Comandos básicos en Redis
-
-
-Comprueba cada uno de los siguientes comandos en tu instalación:
-
-Comandos básicos para claves
-
-Establecer y obtener el valor de una clave
 SET clave valor
 GET clave
 
- Eliminar una clave
+![alt text](image-10.png)
+
+2. Eliminar una clave
 DEL clave
 
- Verificar si una clave existe
+Verificar si una clave existe
 EXISTS clave
 
- Establecer una clave con tiempo de expiración (en segundos)
-SETEX clave tiempo valor
+![alt text](image-11.png)
 
- Obtener el tiempo restante de una clave
-TTL clave
+3. Establecer una clave con tiempo de expiración (en segundos)
+SETEX clave tiempo valor,obtener el tiempo restante de una clave y renombrar una clave
 
- Renombrar una clave
-RENAME clave nueva_clave
+![alt text](image-12.png)
 
-Listas
+### Listas
 
- Agregar elementos al principio y al final de una lista
-LPUSH mi_lista valor1
-RPUSH mi_lista valor2
+ Agregar elementos al principio y al final de una lista, obtener todos los elementos de una lista,obtener y eliminar el primer o último elemento de una lista
+y longitud de la lista
 
- Obtener todos los elementos de una lista
-LRANGE mi_lista 0 -1
+![alt text](image-13.png)
 
- Obtener y eliminar el primer o último elemento de una lista
-LPOP mi_lista
-RPOP mi_lista
+### Conjuntos (Sets)
 
- Longitud de la lista
-LLEN mi_lista
+Agregar elementos a un conjunto, obtener todos los elementos de un conjunto, verificar si un elemento pertenece a un conjunto, eliminar un elemento de un conjunto y operaciones entre conjuntos (intersección, unión, diferencia)
 
-Conjuntos (Sets)
+![alt text](image-16.png)
 
- Agregar elementos a un conjunto
-SADD mi_conjunto valor1 valor2
+![alt text](image-15.png)
 
- Obtener todos los elementos de un conjunto
-SMEMBERS mi_conjunto
+### Hashes
 
- Verificar si un elemento pertenece a un conjunto
-SISMEMBER mi_conjunto valor1
+Agregar un campo a un hash, obtener el valor de un campo, obtener todos los campos y valores, verificar si un campo existe y eliminar un campo
 
- Eliminar un elemento de un conjunto
-SREM mi_conjunto valor1
+![alt text](image-14.png)
 
- Operaciones entre conjuntos (intersección, unión, diferencia)
-SINTER conjunto1 conjunto2
-SUNION conjunto1 conjunto2
-SDIFF conjunto1 conjunto2
-Hashes
+### Administración BBDD
 
- Agregar un campo a un hash
-HSET mi_hash campo1 valor1
-
- Obtener el valor de un campo
-HGET mi_hash campo1
-
- Obtener todos los campos y valores
-HGETALL mi_hash
-
- Verificar si un campo existe
-HEXISTS mi_hash campo1
-
- Eliminar un campo
-HDEL mi_hash campo1
-Administración de bases de datos
-
- Cambiar de base de datos
+1. Cambiar de base de datos
 SELECT número_base_datos
 
- Ver claves en la base de datos actual
+
+2. Ver claves en la base de datos actual
 KEYS *
 
- Limpiar todas las claves de la base de datos actual
+3. Limpiar todas las claves de la base de datos actual
 FLUSHDB
 
- Limpiar todas las claves de todas las bases de datos
+4. Limpiar todas las claves de todas las bases de datos
 FLUSHALL
-Información y monitoreo
 
- Obtener información del servidor
+![alt text](image-9.png)
+
+
+5. Obtener información del servidor
 INFO
 
- Ver estadísticas en tiempo real
+![alt text](image-8.png)
+
+6. Ver estadísticas en tiempo real
 MONITOR
 
- Ver configuración actual
+![alt text](image-18.png)
+
+7. Ver configuración actual
 CONFIG GET *
 
- Cambiar configuración (temporalmente, mientras Redis esté en ejecución)
+![alt text](image-20.png)
+
+8. Cambiar configuración (temporalmente, mientras Redis esté en ejecución)
 CONFIG SET parametro valor
 
-Copias de seguridad y restauración
- Forzar la creación de un snapshot
-SAVE
+![alt text](image-19.png)
 
- Realizar una copia asincrónica
-BGSAVE
+### Copias de seguridad y restauración
+Forzar la creación de un snapshot y realizar una copia asincrónica
 
+![alt text](image-17.png)
 
+## Parte 2: Uso de un cliente visual
 
-
-Parte 2: Uso de un cliente visual
-Instalar RedisInsight (cliente visual oficial)
-Descargar la última versión desde la web oficial:
-https://redis.com/redis-enterprise/redis-insight/
-Instalar RedisInsight:
-sudo dpkg -i <archivo_descargado>.deb
-Abrir RedisInsight:
-redisinsight
 Conectar al servidor Redis (por defecto, host: 127.0.0.1, puerto: 6379).
 Explorar Redis desde RedisInsight
 Crear claves, insertar datos en listas o hashes, y observar las estructuras visualmente.
 
-Parte 3: Otro ejercicio
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+
+## Parte 3: Otro ejercicio
 1. Operaciones
 Crear un sistema de gestión de inventario:
-Añade 5 productos (usando hashes con HSET).
-Incrementa el stock de uno de los productos (HINCRBY).
-Elimina un producto.
+- Añade 5 productos (usando hashes con HSET).
+- Incrementa el stock de uno de los productos (HINCRBY).
+- Elimina un producto.
+
+![alt text](image-3.png)
 
 2. Simular un carrito de compras
 Crear un carrito con la estructura de listas:
 LPUSH carrito "Producto1" "Producto2"
 LRANGE carrito 0 -1
+
+![alt text](image-4.png)
+
+
 
 3. Ranking de usuarios
 Usar un conjunto ordenado para guardar puntuaciones:
@@ -153,16 +125,20 @@ ZADD ranking 100 "usuario1" 200 "usuario2" 150 "usuario3"
 ZRANGE ranking 0 -1 WITHSCORES
 ZREVRANK ranking "usuario2"
 
+![alt text](image-5.png)
+
 4. Simulación de notificaciones
 Usar listas para simular una cola de notificaciones:
 LPUSH notificaciones "Notificación 1" "Notificación 2"
 RPOP notificaciones
 
-Parte 5: Otro Ejercicio Más
+![alt text](image-6.png)
+
+## Parte 4: Otro Ejercicio Más
 Diseña un sistema de control de tareas con Redis. Debe permitir:
 Añadir tareas con nombre y prioridad.
 Consultar todas las tareas en orden de prioridad.
 Marcar tareas como completadas (eliminarlas de la lista).
 Pistas: Usa listas (LPUSH y LPOP) o conjuntos ordenados (ZADD y ZRANGE).
 
-
+![alt text](image-7.png)
