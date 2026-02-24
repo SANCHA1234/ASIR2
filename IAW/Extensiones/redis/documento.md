@@ -19,8 +19,7 @@
 
 ## Interfaz web
 
-
-![alt text](image-3.png)
+![alt text](image-4.png)
 
 Dede la paǵina se pueden insertar vareadores y olivos, además de que se pueden relacionar ambos e insertar más de un vareador a un olivo.
 
