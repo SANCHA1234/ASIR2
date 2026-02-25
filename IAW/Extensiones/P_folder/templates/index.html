@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Coche Flask Gordon - SIN JS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="dashboard">
+            <h2>DASHBOARD</h2>
+            
+            <div class="status {{ 'on' if state.running else 'off' }}">
+                ESTADO: {{ 'ENCENDIDO' if state.running else 'APAGADO' }}
+            </div>
+
+            <div class="speed">
+                {{ state.speed }} <small>km/h</small>
+            </div>
+
+            <div class="indicators">
+                <span class="{{ 'blink' if state.blink_left }}">⬅</span>
+                <span class="{{ 'blink' if state.blink_right }}">➡</span>
+            </div>
+        </div>
+
+        <form action="/action" method="post" class="controls">
+            <button type="submit" name="btn" value="start" class="btn-sys">🔑 ARRANCAR</button>
+            <button type="submit" name="btn" value="stop" class="btn-sys">⛔ APAGAR</button>
+            
+            <div class="full-row">
+                INCREMENTO: 
+                <input type="number" name="increment" value="{{ state.increment }}">
+            </div>
+
+            <button type="submit" name="btn" value="accelerate" {{ '' if state.running else 'disabled' }}>⬆ ACELERAR</button>
+            <button type="submit" name="btn" value="brake" {{ '' if state.running else 'disabled' }}>⬇ FRENAR</button>
+            <button type="submit" name="btn" value="left" {{ '' if state.running else 'disabled' }}>⬅ GIRAR IZQ</button>
+            <button type="submit" name="btn" value="right" {{ '' if state.running else 'disabled' }}>➡ GIRAR DER</button>
+            <button type="submit" name="btn" value="horn" class="full-row" {{ '' if state.running else 'disabled' }}>📣 PITAR</button>
+        </form>
+    </div>
+
+    {% if state.play_horn %}
+    <audio src="{{ url_for('static', filename='horn.mp3') }}" autoplay></audio>
+    {% endif %}
+
+</body>
+</html>
