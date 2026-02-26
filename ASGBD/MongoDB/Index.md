@@ -5,7 +5,7 @@ Una base de datos orientada a documentos almacena datos en documentos similares 
 
 ## 2.NoSQL
 
-<<<<<<< HEAD
+
 Significa que en lugar de guardar los datos en tablas como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos en documentos tipo JSON 
 =======
 Significa que en lugar de guardar los datos en tablas como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos en documentos tipo JSON. 
@@ -21,7 +21,7 @@ La aplicación permite hacer búsquedas de un sólo campo o varios, como puede s
 
 ![alt text](image-58.png)
 
-<<<<<<< HEAD
+
 Además, permite limitar la búsquedad de resultados:
 
 ![alt text](image-59.png)
@@ -89,11 +89,11 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
           # 2. Esquema de la Base de Datos Relacional de mandarinas
 
-          >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
+        
           ## 1. Creamos la base de datos Mandarinas
 
 ![alt text](image-9.png)
-          <<<<<<< HEAD
+       
 
           Mandarinas:
           id_mandarina (INTEGER, PK, AUTOINCREMENT)
@@ -102,7 +102,7 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
           size (TEXT, NOT NULL)
           fecha_recogida (DATE, NOT NULL)
           =======
-          >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
+      
 
           Para poder hacer que los valores id sean Autoincrement, tuve que crear una tabla con los id y función con javascript.
 
@@ -119,7 +119,6 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
 ![alt text](image-15.png)
 
-          <<<<<<< HEAD
           Melocotones:
           id_melocoton (INTEGER, PK, AUTOINCREMENT)
           tipo (TEXT, NOT NULL)
@@ -127,11 +126,10 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
           =======
           - Melocotones: id_melocoton (INTEGER, PK, AUTOINCREMENT),tipo (TEXT, NOT NULL),
           suavidad (BOOLEAN, NOT NULL)
-          >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
+
 
           ![alt text](image-16.png)
-          <<<<<<< HEAD
-
+       
 
           Caquis:
           id_caqui (INTEGER, PK, AUTOINCREMENT)
@@ -141,7 +139,7 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
           pedunculo (BOOLEAN, NOT NULL)
           tiempo_maduracion (INTEGER, NOT NULL)
           =======
-          >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
+      
 
 
           - Caquis:id_caqui (INTEGER, PK, AUTOINCREMENT),id_mandarina (INTEGER, FK, NOT NULL),id_melocoton (INTEGER, FK, NOT NULL),color (TEXT, NOT NULL)
@@ -163,12 +161,11 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
           - Tabla orders:order_id (PRIMARY KEY),user_id (FOREIGN KEY),total (REAL)
 
-          <<<<<<< HEAD
+          
    ![alt text](image-57.png)
-          =======
+          
           ![alt text](image-61.png)
-          >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
-
+         
           - Tabla products:product_id (PRIMARY KEY),name (TEXT),price (REAL)
 
           ![alt text](image-13.png)
@@ -327,12 +324,9 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
   ![alt text](image-55.png)
 
-          <<<<<<< HEAD
+          
           # 3.Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
-          =======
-          # 3. Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
-          >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
-
+       
           Después de haber trabajado con ambas opciones, he ahorrado tiempo de la forma gráfica puesto que ya estaban hechas las tablas desde el terminal y sólo he tenido que importarlas. No obstante, después de estar navegando por la aplicación no encontré ninguna otra forma de subir las tablas que no fuera a comando, por lo que en ese aspecto, prefiero el terminal.
 
           Y a la hora de filtrar, también había que hacerlo a comando porque no hay otra forma y tienes que saber los filtros, por lo que en mi opinión no ofrece ninguna ventaja en cuanto al ahorro de tiempo para hacer los filtros.
