@@ -57,7 +57,7 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
      =======
      Además, permite limitar la búsquedad de resultados:
 
-     ![alt text](image-57.png)
+![alt text](image-57.png)
 
      O para buscar por cantidades si son mayores o menores, como:
 
@@ -71,11 +71,11 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
      MongoDB permite crear índices, para optimizar las búsquedas de información, como este ejemplo:
 
-     ![alt text](image-59.png)
+![alt text](image-59.png)
 
      El resultado es el siguieten:
 
-     ![alt text](image-60.png)
+![alt text](image-60.png)
 
      La primera línea indica que la colección fue creada manualmente con MongoDB create collection. La segunda línea muestra cuántos índices hay antes de que se ejecute el comando. La tercera línea muestra el número de índices después del comando, y la cuarta línea indica el éxito de la operación.
 
@@ -92,7 +92,7 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
           >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
           ## 1. Creamos la base de datos Mandarinas
 
-          ![alt text](image-9.png)
+![alt text](image-9.png)
           <<<<<<< HEAD
 
           Mandarinas:
@@ -106,18 +106,18 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
           Para poder hacer que los valores id sean Autoincrement, tuve que crear una tabla con los id y función con javascript.
 
-          ![alt text](image-63.png)
+![alt text](image-63.png)
 
           La parte de find and modify query es que mientras se asigna el numero se para el resto de operacion y no se asignes dos ID iguales, el query  para que busque el id, update lo actualiza y le suma +1 y el new:true es para que devuelva la bbdd actualizada y si es false, lo devuelve sin actualizar.
 
-          ![alt text](image-64.png)
+![alt text](image-64.png)
 
           Si quisieras empezar a contar desde otro número, simplemente en la imagen que muestro en el id que te interesa, cambias el 0 por el número al que quieres empezar a contar.
 
           - Mandarinas:id_mandarina (INTEGER, PK, AUTOINCREMENT),color (TEXT, NOT NULL),tipo (TEXT, NOT NULL)
           size (TEXT, NOT NULL),fecha_recogida (DATE, NOT NULL)
 
-          ![alt text](image-15.png)
+![alt text](image-15.png)
 
           <<<<<<< HEAD
           Melocotones:
@@ -147,11 +147,11 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
           - Caquis:id_caqui (INTEGER, PK, AUTOINCREMENT),id_mandarina (INTEGER, FK, NOT NULL),id_melocoton (INTEGER, FK, NOT NULL),color (TEXT, NOT NULL)
           pedunculo (BOOLEAN, NOT NULL),tiempo_maduracion (INTEGER, NOT NULL)
 
-          ![alt text](image-17.png)
+![alt text](image-17.png)
 
           - Total de tablas:
 
-          ![alt text](image-18.png)
+![alt text](image-18.png)
 
           # 2.Esquema de la Base de Datos Relacional de un comercio
 
@@ -164,7 +164,7 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
           - Tabla orders:order_id (PRIMARY KEY),user_id (FOREIGN KEY),total (REAL)
 
           <<<<<<< HEAD
-          ![alt text](image-57.png)
+   ![alt text](image-57.png)
           =======
           ![alt text](image-61.png)
           >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
@@ -185,145 +185,147 @@ La agregación consiste en reunir datos existentes de múltiples fuentes y expre
 
           ### Tabla Mandarinas:
 
-          ![alt text](image-26.png)
+  ![alt text](image-26.png)
 
           ### Tabla Melocotones:
 
-          ![alt text](image-25.png)
+ ![alt text](image-25.png)
 
           ### Tabla caquis:
 
-          ![alt text](image-24.png)
+  ![alt text](image-24.png)
 
           ### Tabla users:
 
-          ![alt text](image-23.png)
+  ![alt text](image-23.png)
 
           ### Tabla Products:
 
-          ![alt text](image-22.png)
+  ![alt text](image-22.png)
 
           ### Tabla Orders:
 
-          ![alt text](image-20.png)
+  ![alt text](image-20.png)
 
           ### Tabla Orders_Products:
 
-          ![alt text](image-21.png)
+  ![alt text](image-21.png)
 
           ## 2. Realiza las siguientes consultas:
 
           ### 0: Lista todas la colecciones
 
-          ![alt text](image-27.png)
+  ![alt text](image-27.png)
 
           ### 1: Listar todos los usuarios
 
-          ![alt text](image-28.png)
+ ![alt text](image-28.png)
 
           ### 2: Buscar pedidos de un usuario cuyo id sea 1
 
-          ![alt text](image-29.png)
+  ![alt text](image-29.png)
 
           ### 3: Listar productos con precio mayor a 30
 
-          ![alt text](image-30.png)
+   ![alt text](image-30.png)
+
           ### 4: Buscar pedidos que contengan un producto con id = 2
 
           <<<<<<< HEAD
-          ![alt text](image-56.png)
+   ![alt text](image-56.png)
           =======
-          ![alt text](image-62.png)
+   ![alt text](image-62.png)
           >>>>>>> 6fe29431d879bdf220863b919f73389f9962f3c6
 
           ### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
 
-          ![alt text](image-32.png) 
+  ![alt text](image-32.png) 
+
           ### 6: Mostrar solo los nombres y correos de los usuarios
 
-          ![alt text](image-33.png)
+ ![alt text](image-33.png)
 
           ### 7: Contar cuántos productos tienen un precio menor o igual a 50
 
-          ![alt text](image-34.png)
+ ![alt text](image-34.png)
 
           ### 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
 
-          ![alt text](image-35.png)
+ ![alt text](image-35.png)
 
           ### 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
 
-          ![alt text](image-36.png)
+  ![alt text](image-36.png)
 
           ### 10: Listar productos únicos comprados en todos los pedidos
 
-          ![alt text](image-37.png)
+ ![alt text](image-37.png)
 
           ## 2. Realiza lo mismo desde la interfaz gráfica MongoDB Compass creando una base de datos llamada mi_comercio2
 
           Para crear las tablas de forma gráfica, desde la BBDD de mandarinas y de comercio permite exportar sus tablas en formato de JSON, de esta forma, al crear la BBDD de micomercio_2, deja importar las tablas que se han exportado anteriormente. 
 
-          ![alt text](image-46.png)
+  ![alt text](image-46.png)
 
-          ![alt text](image-47.png)
+  ![alt text](image-47.png)
 
-          ![alt text](image-42.png)
+  ![alt text](image-42.png)
 
-          ![alt text](image-43.png)
+  ![alt text](image-43.png)
 
-          ![alt text](image-44.png)
+  ![alt text](image-44.png)
 
-          ![alt text](image-45.png)
+  ![alt text](image-45.png)
 
 
           Por otro lado, para el tema de los filtros, existe una terminal en la plataforma, por lo que he utilizado los mismos filtros para hacer las búsquedas.
 
           ### 0: Lista todas la colecciones
 
-          ![alt text](image-39.png)
+ ![alt text](image-39.png)
 
           ### 1: Listar todos los usuarios
 
-          ![alt text](image-38.png)
+  ![alt text](image-38.png)
 
           ### 2: Buscar pedidos de un usuario cuyo id sea 1
 
-          ![alt text](image-40.png)
+  ![alt text](image-40.png)
 
           ### 3: Listar productos con precio mayor a 30
 
-          ![alt text](image-41.png)
+  ![alt text](image-41.png)
 
           ### 4: Buscar pedidos que contengan un producto con id = 2
 
-          ![alt text](image-48.png)
+  ![alt text](image-48.png)
 
           ### 5: Obtener usuarios que hayan realizado pedidos con un total mayor a 40
 
-          ![alt text](image-49.png)
+  ![alt text](image-49.png)
 
           ### 6: Mostrar solo los nombres y correos de los usuarios
 
-          ![alt text](image-50.png)
+   ![alt text](image-50.png)
 
           ### 7: Contar cuántos productos tienen un precio menor o igual a 50
 
-          ![alt text](image-51.png)
+   ![alt text](image-51.png)
 
           ### 8: Encontrar usuarios que hayan pedido un producto llamado "Mouse"
 
-          ![alt text](image-52.png)
+  ![alt text](image-52.png)
 
-          ![alt text](image-53.png)
+  ![alt text](image-53.png)
 
 
           ### 9: Agrupar los pedidos por usuario y calcular el total gastado por cada uno
 
-          ![alt text](image-54.png)
+  ![alt text](image-54.png)
 
           ### 10: Listar productos únicos comprados en todos los pedidos
 
-          ![alt text](image-55.png)
+  ![alt text](image-55.png)
 
           <<<<<<< HEAD
           # 3.Reflexión sobre las diferencias entre trabajar con MongoDB desde la terminal y desde Compass, destacando ventajas y desventajas de cada método.
