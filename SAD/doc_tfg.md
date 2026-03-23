@@ -2,10 +2,29 @@
 
 2. Configuracion servidor correo
 
+    - Recepción de correo
 
+![alt text](imagen-7.png)
 
+    - Creación de usuarios
 
+![alt text](imagen-10.png)
 
+    - Cambios en el archivo main.cf de postfix
+
+![alt text](imagen-8.png)
+
+    - Usuario virtual
+
+    ![alt text](imagen-9.png)
+
+    - Archivo de búsqueda de usuarios
+
+    ![alt text](imagen-11.png)
+
+    - Directiva de autenticacion
+
+    ![alt text](imagen-12.png)
 3. Configuracion servidor mensajeria instantaneo
  
 Para crear un servicio de chat entre comprador y vendedor, se ha instalado un debian 12 que actúa como servidor y se instaló el servicio prosody. 
