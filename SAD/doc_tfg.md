@@ -1,3 +1,8 @@
+
+Introducción
+
+No ibstante, esta no fue la primera idea y tampoco la única, también tuvimos en mente elaborar una web que consistía en una página de búsqueda de empleo donde la gente describe sus habilidades y también permite registrarse al personal de rrhh, para reclutar personal.
+
 1. Configuracion firewall
 
 2. Configuracion servidor correo
