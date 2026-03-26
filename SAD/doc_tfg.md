@@ -5,6 +5,14 @@ No ibstante, esta no fue la primera idea y tampoco la única, también tuvimos e
 
 1. Configuracion firewall
 
+    - Permitir trafrico dns de la dmz a lan
+
+    ![alt text](image.png)
+
+    - Permitir trafico web de la dmz a lan
+
+    ![alt text](image-1.png)
+
 2. Configuracion servidor correo
 
     - Recepción de correo
