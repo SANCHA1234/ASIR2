@@ -29,15 +29,15 @@ No ibstante, esta no fue la primera idea y tampoco la única, también tuvimos e
 
     - Usuario virtual
 
-    ![alt text](imagen-9.png)
+   ![alt text](imagen-9.png)
 
     - Archivo de búsqueda de usuarios
 
-    ![alt text](imagen-11.png)
+![alt text](imagen-11.png)
 
     - Directiva de autenticacion
 
-    ![alt text](imagen-12.png)
+![alt text](imagen-12.png)
 3. Configuracion servidor mensajeria instantaneo
  
 Para crear un servicio de chat entre comprador y vendedor, se ha instalado un debian 12 que actúa como servidor y se instaló el servicio prosody. 
